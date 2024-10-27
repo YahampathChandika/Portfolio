@@ -136,7 +136,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="sticky top-10 z-50 text-white flex justify-between items-center px-5 md:px-10 py-3 md:py-5">
+    <nav className="sticky top-10 z-50 text-white flex justify-between items-center px-3 md:px-10 py-3 md:py-5">
       {/* Logo and Name */}
       <div className="flex items-center">
         <img
