@@ -126,7 +126,7 @@ export default function Navbar() {
       </div>
 
       {/* Mobile View: Dropdown Icon */}
-      <div className="md:hidden ml-10">
+      <div className="md:hidden ml-5">
         <button
           className="text-white focus:outline-none"
           onClick={() => setDropdownOpen(!dropdownOpen)}
