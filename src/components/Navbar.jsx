@@ -113,19 +113,27 @@ import { useState, useEffect, useRef } from "react";
 
 export default function Navbar() {
   const [activeTab, setActiveTab] = useState("work");
-  const [dropdownOpen, setDropdownOpen] = useState(false); // For dropdown toggle
-  const dropdownRef = useRef(null); // Reference for detecting outside clicks
+  const [dropdownOpen, setDropdownOpen] = useState(false); 
+  const dropdownRef = useRef(null); 
 
   // Handle closing dropdown when clicking outside
   useEffect(() => {
     const handleOutsideClick = (event) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target)
+      ) {
         setDropdownOpen(false);
       }
     };
     document.addEventListener("mousedown", handleOutsideClick);
     return () => document.removeEventListener("mousedown", handleOutsideClick);
   }, []);
+
+  const toggleDropdown = (event) => {
+    event.stopPropagation(); // Prevent outside click detection
+    setDropdownOpen((prev) => !prev); // Toggle dropdown state
+  };
 
   return (
     <nav className="sticky top-10 z-50 text-white flex justify-between items-center px-5 md:px-10 py-3 md:py-5">
@@ -145,14 +153,12 @@ export default function Navbar() {
       {/* Button Group with Toggle Indicator */}
       <div className="relative inline-flex items-center bg-gray-800/50 border border-gray-700 p-1 rounded-full shadow-lg w-[250px] md:w-[200px] ml-5 md:ml-10">
         <div className="relative rounded-full p-1 w-full">
-          {/* Tab Indicator */}
           <div
             className={`absolute top-0.5 bottom-0.5 left-0 opacity-50 bg-gray-500 rounded-full transition-transform duration-300 ease-in-out w-1/2 ${
               activeTab === "info" ? "translate-x-full" : "translate-x-0"
             }`}
           ></div>
 
-          {/* Work Button */}
           <button
             className={`relative z-10 py-2 text-sm w-1/2 font-medium rounded-full transition-colors duration-300 hover:text-white ${
               activeTab === "work" ? "text-white" : "text-gray-400"
@@ -162,7 +168,6 @@ export default function Navbar() {
             Work
           </button>
 
-          {/* Info Button */}
           <button
             className={`relative z-10 px-4 py-2 text-sm w-1/2 font-medium rounded-full transition-colors duration-300 hover:text-white ${
               activeTab === "info" ? "text-white" : "text-gray-400"
@@ -191,10 +196,10 @@ export default function Navbar() {
       </div>
 
       {/* Mobile View: Dropdown Icon */}
-      <div className="md:hidden ml-5">
+      <div className="md:hidden ml-5" ref={dropdownRef}>
         <button
           className="text-white focus:outline-none"
-          onClick={() => setDropdownOpen(!dropdownOpen)}
+          onClick={toggleDropdown}
         >
           <span className="material-symbols-outlined text-3xl">
             alternate_email
@@ -203,7 +208,6 @@ export default function Navbar() {
 
         {/* Dropdown Menu with Transition */}
         <div
-          ref={dropdownRef}
           className={`absolute top-20 right-5 bg-gray-800 border border-gray-700 rounded-lg shadow-lg p-5 transition-all duration-300 ease-in-out ${
             dropdownOpen ? "opacity-100 scale-100" : "opacity-0 scale-95"
           }`}
@@ -234,3 +238,4 @@ export default function Navbar() {
     </nav>
   );
 }
+
