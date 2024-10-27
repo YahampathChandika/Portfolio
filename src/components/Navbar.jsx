@@ -140,7 +140,7 @@ export default function Navbar() {
       {/* Logo and Name */}
       <div className="flex items-center">
         <img
-          className="h-14 mr-5"
+          className="h-14 mr-3 md:mr-5"
           src="https://cdn.vectorstock.com/i/500p/80/27/yc-logo-monogram-design-template-vector-38558027.jpg"
         />
         {/* Name & Title (hidden on mobile) */}
@@ -151,7 +151,7 @@ export default function Navbar() {
       </div>
 
       {/* Button Group with Toggle Indicator */}
-      <div className="relative inline-flex items-center bg-gray-800/50 border border-gray-700 p-1 rounded-full shadow-lg w-[250px] md:w-[200px] ml-5 md:ml-10">
+      <div className="relative inline-flex items-center bg-gray-800/50 border border-gray-700 p-1 rounded-full shadow-lg w-[250px] md:w-[200px] ml-0 md:ml-10">
         <div className="relative rounded-full p-1 w-full">
           <div
             className={`absolute top-0.5 bottom-0.5 left-0 opacity-50 bg-gray-500 rounded-full transition-transform duration-300 ease-in-out w-1/2 ${
@@ -196,7 +196,7 @@ export default function Navbar() {
       </div>
 
       {/* Mobile View: Dropdown Icon */}
-      <div className="md:hidden ml-5" ref={dropdownRef}>
+      <div className="md:hidden ml-3" ref={dropdownRef}>
         <button
           className="text-white focus:outline-none"
           onClick={toggleDropdown}
