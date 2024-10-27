@@ -63,7 +63,7 @@ export default function Navbar() {
   const [dropdownOpen, setDropdownOpen] = useState(false); // For dropdown toggle
 
   return (
-    <nav className="sticky top-10 z-50 text-white flex justify-between items-center px-10 py-5">
+    <nav className="sticky top-10 z-50 text-white flex justify-between items-center px-5 md:px-10 py-3 md:py-5">
       {/* Logo and Name */}
       <div className="flex items-center">
         <img
