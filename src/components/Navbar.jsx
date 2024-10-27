@@ -89,7 +89,7 @@ export default function Navbar() {
 
           {/* Work Button */}
           <button
-            className={`relative z-10 bg-red-500 py-2 text-sm w-1/2 font-medium rounded-full transition-colors duration-300 hover:text-white ${
+            className={`relative z-10 py-2 text-sm w-1/2 font-medium rounded-full transition-colors duration-300 hover:text-white ${
               activeTab === "work" ? "text-white" : "text-gray-400"
             }`}
             onClick={() => setActiveTab("work")}
