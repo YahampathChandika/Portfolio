@@ -78,7 +78,7 @@ export default function Navbar() {
       </div>
 
       {/* Button Group with Toggle Indicator */}
-      <div className="relative inline-flex items-center bg-gray-800/50 border border-gray-700 p-1 rounded-full shadow-lg w-[200px] ml-10">
+      <div className="relative inline-flex items-center bg-gray-800/50 border border-gray-700 p-1 rounded-full shadow-lg w-[250px] md:w-[200px] ml-5 md:ml-10">
         <div className="relative rounded-full p-1 w-full">
           {/* Tab Indicator */}
           <div
