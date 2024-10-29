@@ -12,7 +12,6 @@ export default function Projects() {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    // Fetch projects data from JSON on mount
     setProjects(projectsData);
 
     // Detect mobile view
@@ -64,7 +63,7 @@ export default function Projects() {
           className="w-full py-10 px-6 md:px-12 text-white rounded-2xl shadow-neon neon-border mb-12"
           initial={
             isMobile
-              ? { y: 20, opacity: 0 } // Uniform slide-up animation for mobile
+              ? { y: 50, opacity: 0 } // Uniform slide-up animation for mobile
               : { x: index % 2 === 0 ? -200 : 200, opacity: 0 } // Alternate for desktop
           }
           whileInView={{ x: 0, y: 0, opacity: 1 }}
