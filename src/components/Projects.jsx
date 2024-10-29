@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
-import { motion } from "framer-motion"; // Import motion from framer-motion
+import { motion, useAnimation } from "framer-motion"; // Import useAnimation
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import gitHub from "../assets/images/github.png";
@@ -8,9 +8,19 @@ import projectsData from "../assets/data/projectsData.json";
 
 export default function Projects() {
   const [projects, setProjects] = useState([]);
+  const controls = useAnimation(); // For responsive animations
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
+    // Fetch projects data from JSON on mount
     setProjects(projectsData);
+
+    // Detect mobile view
+    const handleResize = () => setIsMobile(window.innerWidth <= 768);
+    handleResize(); // Check once on component load
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   const PrevArrow = ({ onClick }) => (
@@ -52,10 +62,14 @@ export default function Projects() {
         <motion.div
           key={index}
           className="w-full py-10 px-6 md:px-12 text-white rounded-2xl shadow-neon neon-border mb-12"
-          initial={{ x: index % 2 === 0 ? -200 : 200, opacity: 0 }} // Alternate directions
-          whileInView={{ x: 0, opacity: 1 }}
+          initial={
+            isMobile
+              ? { y: 50, opacity: 0 } // Uniform slide-up animation for mobile
+              : { x: index % 2 === 0 ? -200 : 200, opacity: 0 } // Alternate for desktop
+          }
+          whileInView={{ x: 0, y: 0, opacity: 1 }}
           transition={{ duration: 0.8, ease: "easeInOut" }}
-          viewport={{ once: true, amount: 0.5 }} // Trigger once when half of the card is visible
+          viewport={{ once: false, amount: 0.5 }}
         >
           <div className="flex justify-between items-center mb-8">
             <p className="font-semibold text-2xl md:text-3xl">
