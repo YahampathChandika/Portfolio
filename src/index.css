@@ -9,3 +9,20 @@
 * {
   font-family: "Poppins", sans-serif;
 }
+
+@layer components {
+  .neon-border {
+    border-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+  }
+  .shadow-neon {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  }
+  .neon-hover:hover {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    color: white;
+  }
+  .glow-text {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  }
+}
