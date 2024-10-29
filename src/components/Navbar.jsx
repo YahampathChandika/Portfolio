@@ -97,7 +97,7 @@ export default function Navbar() {
         </button> */}
 
         <button
-          className="text-white focus:outline-none"
+          className="text-white focus:outline-none min-w-4"
           onClick={toggleDropdown}
         >
           <span
