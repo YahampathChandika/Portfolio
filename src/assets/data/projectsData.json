@@ -1,0 +1,51 @@
+[
+  {
+    "title": "AI-Enhanced Remote ICU Monitoring System",
+    "description": "A web-based system for monitoring ICU patients using AI-enhanced reporting.",
+    "features": [
+      "Real-time vital sign monitoring",
+      "Role-based views for doctors and nurses",
+      "Automated alert generation",
+      "Note-keeping and patient discharge functionality"
+    ],
+    "techStack": ["React", "Node.js", "MySQL", "AWS", "Tailwind CSS"],
+    "images": [
+      "https://blog.openreplay.com/images/creating-a-simple-carousel-with-react-slick/images/hero.png",
+      "https://blog.openreplay.com/images/creating-a-simple-carousel-with-react-slick/images/hero.png"
+    ],
+    "codeLink": "https://github.com/example/icu-monitoring-system",
+    "demoLink": "https://icu-monitoring-system.demo.com"
+  },
+  {
+    "title": "Supercar Store Website",
+    "description": "An e-commerce website for showcasing and selling supercars.",
+    "features": [
+      "Responsive design for desktop and mobile",
+      "Admin dashboard for managing inventory",
+      "Integration with payment gateways"
+    ],
+    "techStack": ["React", "Node.js", "MySQL", "AWS", "Tailwind CSS"],
+    "images": [
+      "https://blog.openreplay.com/images/creating-a-simple-carousel-with-react-slick/images/hero.png",
+      "https://blog.openreplay.com/images/creating-a-simple-carousel-with-react-slick/images/hero.png"
+    ],
+    "codeLink": "https://github.com/example/supercar-store",
+    "demoLink": "https://supercar-store.demo.com"
+  },
+  {
+    "title": "Portfolio Website",
+    "description": "A personal portfolio website to showcase my projects and experience.",
+    "features": [
+      "Projects and experience section",
+      "Contact form integration",
+      "Modern and responsive design"
+    ],
+    "techStack": ["React", "Tailwind CSS", "Vercel"],
+    "images": [
+      "https://blog.openreplay.com/images/creating-a-simple-carousel-with-react-slick/images/hero.png",
+      "https://blog.openreplay.com/images/creating-a-simple-carousel-with-react-slick/images/hero.png"
+    ],
+    "codeLink": "https://github.com/example/portfolio",
+    "demoLink": "https://portfolio.demo.com"
+  }
+]

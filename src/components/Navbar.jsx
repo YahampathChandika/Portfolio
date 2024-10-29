@@ -149,7 +149,7 @@ export default function Navbar() {
     //   </div>
     // </nav>
 
-    <nav className="sticky top-10 z-50 flex justify-between items-center px-3 md:px-10 py-3 md:py-5 bg-black">
+    <nav className="sticky top-10 z-50 flex justify-between items-center px-3 md:px-10 py-3 md:py-5">
       {/* Logo and Name */}
       <div className="flex items-center">
         <img
@@ -164,7 +164,7 @@ export default function Navbar() {
       </div>
 
       {/* Button Group with Toggle Indicator */}
-      <div className="relative inline-flex items-center bg-black border border-white/20 p-1 rounded-full shadow-neon w-full md:w-[200px] mx-5 md:ml-10">
+      <div className="relative inline-flex items-center border border-white/20 p-1 rounded-full shadow-neon w-full md:w-[200px] mx-5 md:ml-10">
         <div className="relative rounded-full p-1 w-full">
           <div
             className={`absolute top-0.5 bottom-0.5 left-0 bg-white/20 rounded-full transition-transform duration-300 ease-in-out w-1/2 ${
@@ -173,7 +173,7 @@ export default function Navbar() {
           ></div>
 
           <button
-            className={`relative z-10 py-2 text-sm w-1/2 font-medium rounded-full transition-colors duration-300 hover:text-white ${
+            className={`relative z-10 py-2 text-sm w-1/2 font-medium glow-text neon-hover rounded-full transition-colors duration-300 hover:text-white ${
               activeTab === "work" ? "text-white" : "text-gray-400"
             }`}
             onClick={() => setActiveTab("work")}
@@ -182,7 +182,7 @@ export default function Navbar() {
           </button>
 
           <button
-            className={`relative z-10 px-4 py-2 text-sm w-1/2 font-medium rounded-full transition-colors duration-300 hover:text-white ${
+            className={`relative z-10 px-4 py-2 text-sm w-1/2 font-medium glow-text neon-hover rounded-full transition-colors duration-300 hover:text-white ${
               activeTab === "info" ? "text-white" : "text-gray-400"
             }`}
             onClick={() => setActiveTab("info")}
@@ -217,7 +217,7 @@ export default function Navbar() {
       <div className="md:hidden" ref={dropdownRef}>
         <div className="relative">
           <button
-            className="text-white flex items-center justify-center w-10 h-10 border border-1 bg-black neon-border rounded-full"
+            className="text-white flex items-center justify-center w-10 h-10 border border-1 neon-border rounded-full"
             onClick={toggleDropdown}
           >
             <span
@@ -243,7 +243,7 @@ export default function Navbar() {
         </div>
 
         <div
-          className={`absolute top-20 right-5 bg-black border border-white/20 rounded-lg shadow-neon p-5 transition-all duration-300 ease-in-out ${
+          className={`absolute top-20 right-5 border bg-black border-white/20 rounded-lg shadow-neon p-5 transition-all duration-300 ease-in-out ${
             dropdownOpen ? "opacity-100 scale-100" : "opacity-0 scale-95"
           }`}
           style={{ transformOrigin: "top right" }}

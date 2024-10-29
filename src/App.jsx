@@ -1,10 +1,10 @@
 // src/App.jsx
-import Navbar from "./components/Navbar";
+import Work from "./pages/Work";
 
 export default function App() {
   return (
     <div>
-      <Navbar />
+      <Work />
     </div>
   );
 }
