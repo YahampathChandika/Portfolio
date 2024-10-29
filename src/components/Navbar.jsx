@@ -21,7 +21,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="sticky top-10 z-50 text-white flex justify-between items-center px-3 md:px-10 py-3 md:py-5">
+    <nav className="sticky top-10 z-50 flex justify-between items-center px-3 md:px-10 py-3 md:py-5">
       {/* Logo and Name */}
       <div className="flex items-center">
         <img
@@ -87,35 +87,6 @@ export default function Navbar() {
 
       {/* Mobile View: Dropdown Icon */}
       <div className="md:hidden" ref={dropdownRef}>
-        {/* <button
-          className="text-white focus:outline-none"
-          onClick={toggleDropdown}
-        >
-          <span className="material-symbols-outlined text-3xl">
-            {dropdownOpen ? "close" : "alternate_email"}
-          </span>
-        </button> */}
-
-        {/* <button
-          className="text-white focus:outline-none min-w-4"
-          onClick={toggleDropdown}
-        >
-          <span
-            className={`material-symbols-outlined text-3xl transition-transform duration-300 ease-in-out ${
-              dropdownOpen ? "rotate-90 opacity-0" : "rotate-0 opacity-100"
-            } absolute top-5 right-2`}
-          >
-            alternate_email
-          </span>
-          <span
-            className={`material-symbols-outlined text-3xl transition-transform duration-300 ease-in-out ${
-              dropdownOpen ? "rotate-0 opacity-100" : "-rotate-90 opacity-0"
-            } absolute top-5 right-2`}
-          >
-            close
-          </span>
-        </button> */}
-
         <div className="relative">
           <button
             className="text-white focus:outline-none relative flex items-center justify-center w-10 h-10"
