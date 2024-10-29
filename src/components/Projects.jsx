@@ -14,8 +14,8 @@
 //     const { onClick } = props;
 //     return (
 //       <span
-//         className="material-symbols-outlined absolute w-8 h-8 flex justify-center items-center top-1/2 -translate-y-1/2 bg-black/40 text-white text-xl 
-//         rounded-full p-2 cursor-pointer transition-all duration-300 ease-in-out 
+//         className="material-symbols-outlined absolute w-8 h-8 flex justify-center items-center top-1/2 -translate-y-1/2 bg-black/40 text-white text-xl
+//         rounded-full p-2 cursor-pointer transition-all duration-300 ease-in-out
 //          z-20 left-2"
 //         onClick={onClick}
 //       >
@@ -28,8 +28,8 @@
 //     const { onClick } = props;
 //     return (
 //       <span
-//         className="material-symbols-outlined absolute w-8 h-8 flex justify-center items-center top-1/2 -translate-y-1/2 bg-black/40 text-white text-xl 
-//          rounded-full p-2 cursor-pointer transition-all duration-300 ease-in-out 
+//         className="material-symbols-outlined absolute w-8 h-8 flex justify-center items-center top-1/2 -translate-y-1/2 bg-black/40 text-white text-xl
+//          rounded-full p-2 cursor-pointer transition-all duration-300 ease-in-out
 //          z-20 right-2"
 //         onClick={onClick}
 //       >
@@ -124,7 +124,6 @@
 //   );
 // }
 
-
 import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -142,7 +141,7 @@ export default function Projects() {
 
   const PrevArrow = ({ onClick }) => (
     <span
-      className="material-symbols-outlined absolute w-5 md:w-8 h-5 md:h-8 flex justify-center items-center top-1/2 -translate-y-1/2 bg-black/40 text-white text-xl rounded-full p-2 cursor-pointer transition-all duration-300 ease-in-out z-20 left-1 md:left-2"
+      className="hidden material-symbols-outlined absolute w-8 h-8 md:flex justify-center items-center top-1/2 -translate-y-1/2 bg-black/40 text-white text-xl rounded-full p-2 cursor-pointer transition-all duration-300 ease-in-out z-20 left-2"
       onClick={onClick}
     >
       keyboard_arrow_left
@@ -151,7 +150,7 @@ export default function Projects() {
 
   const NextArrow = ({ onClick }) => (
     <span
-      className="material-symbols-outlined absolute w-5 md:w-8 h-5 md:h-8 flex justify-center items-center top-1/2 -translate-y-1/2 bg-black/40 text-white text-xl rounded-full p-2 cursor-pointer transition-all duration-300 ease-in-out z-20 right-1 md:right-2"
+      className="hidden material-symbols-outlined absolutew-8 h-8 md:flex justify-center items-center top-1/2 -translate-y-1/2 bg-black/40 text-white text-xl rounded-full p-2 cursor-pointer transition-all duration-300 ease-in-out z-20 right-2"
       onClick={onClick}
     >
       keyboard_arrow_right
@@ -181,7 +180,9 @@ export default function Projects() {
           className="w-full py-10 px-6 md:px-12 text-white rounded-2xl shadow-neon neon-border mb-12"
         >
           <div className="flex justify-between items-center mb-8">
-            <p className="font-semibold text-2xl md:text-3xl">{project.title}</p>
+            <p className="font-semibold text-2xl md:text-3xl">
+              {project.title}
+            </p>
           </div>
 
           <div className="flex flex-col md:flex-row md:space-x-10 space-y-6 md:space-y-0">
@@ -202,11 +203,13 @@ export default function Projects() {
 
             {/* Right Side: Project Details */}
             <div className="w-full md:w-1/2 text-gray-400">
-              <p className="text-lg md:text-xl mb-6">{project.description}</p>
+              <p className="text-base md:text-xl mb-6">{project.description}</p>
 
               <div className="mb-4">
-                <h3 className="text-lg md:text-xl font-semibold mb-2">Key Features</h3>
-                <ul className="list-disc list-inside space-y-2">
+                <h3 className="text-base md:text-xl font-semibold mb-2">
+                  Key Features
+                </h3>
+                <ul className="text-sm md:text-lg list-disc list-inside space-y-2">
                   {project.features.map((feature, idx) => (
                     <li key={idx}>{feature}</li>
                   ))}
@@ -214,11 +217,15 @@ export default function Projects() {
               </div>
 
               <div className="mb-4">
-                <h3 className="text-lg md:text-xl font-semibold mb-2">Tech Stack</h3>
-                <p>{project.techStack.join(", ")}</p>
+                <h3 className="text-base md:text-xl font-semibold mb-2">
+                  Tech Stack
+                </h3>
+                <p className="text-sm md:text-lg">
+                  {project.techStack.join(", ")}
+                </p>
               </div>
 
-              <div className="flex space-x-6 md:space-x-12 justify-center md:justify-end mt-8">
+              <div className="flex space-x-6 md:space-x-12 justify-between md:justify-end mt-8">
                 <a
                   href={project.codeLink}
                   target="_blank"
@@ -228,7 +235,7 @@ export default function Projects() {
                   <img
                     src={gitHub}
                     alt="GitHub"
-                    className="w-10 h-10 rounded-full border border-gray-300 p-1"
+                    className="w-6 md:w-10 h-6 md:h-10 rounded-full border border-gray-300"
                   />
                   <p className="ml-4">Code</p>
                 </a>
@@ -238,7 +245,7 @@ export default function Projects() {
                   rel="noopener noreferrer"
                   className="flex items-center cursor-pointer transition-all neon-hover"
                 >
-                  <span className="material-symbols-outlined text-3xl rounded-full border border-gray-300 w-10 h-10 flex items-center justify-center">
+                  <span className="material-symbols-outlined text-xl md:text-3xl rounded-full border border-gray-300 w-6 md:w-10 h-6 md:h-10 flex items-center justify-center">
                     laptop_mac
                   </span>
                   <p className="ml-4">Demo</p>
