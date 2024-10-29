@@ -5,7 +5,6 @@ export default function Navbar() {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const dropdownRef = useRef(null);
 
-  // Handle closing dropdown when clicking outside
   useEffect(() => {
     const handleOutsideClick = (event) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
@@ -17,8 +16,8 @@ export default function Navbar() {
   }, []);
 
   const toggleDropdown = (event) => {
-    event.stopPropagation(); // Prevent outside click detection
-    setDropdownOpen((prev) => !prev); // Toggle dropdown state
+    event.stopPropagation();
+    setDropdownOpen((prev) => !prev);
   };
 
   return (
@@ -88,12 +87,32 @@ export default function Navbar() {
 
       {/* Mobile View: Dropdown Icon */}
       <div className="md:hidden ml-3" ref={dropdownRef}>
-        <button
+        {/* <button
           className="text-white focus:outline-none"
           onClick={toggleDropdown}
         >
           <span className="material-symbols-outlined text-3xl">
+            {dropdownOpen ? "close" : "alternate_email"}
+          </span>
+        </button> */}
+
+        <button
+          className="text-white focus:outline-none"
+          onClick={toggleDropdown}
+        >
+          <span
+            className={`material-symbols-outlined text-3xl transition-transform duration-300 ease-in-out ${
+              dropdownOpen ? "rotate-90 opacity-0" : "rotate-0 opacity-100"
+            } absolute top-5 right-2`}
+          >
             alternate_email
+          </span>
+          <span
+            className={`material-symbols-outlined text-3xl transition-transform duration-300 ease-in-out ${
+              dropdownOpen ? "rotate-0 opacity-100" : "-rotate-90 opacity-0"
+            } absolute top-5 right-2`}
+          >
+            close
           </span>
         </button>
 
