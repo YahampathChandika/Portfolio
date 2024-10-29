@@ -36,7 +36,7 @@ export default function Navbar() {
       </div>
 
       {/* Button Group with Toggle Indicator */}
-      <div className="relative inline-flex items-center bg-gray-800/50 border border-gray-700 p-1 rounded-full shadow-lg w-[250px] md:w-[200px] ml-0 md:ml-10">
+      <div className="relative inline-flex items-center bg-gray-800/50 border border-gray-700 p-1 rounded-full shadow-lg w-[250px] md:w-[200px] mx-3 md:ml-10">
         <div className="relative rounded-full p-1 w-full">
           <div
             className={`absolute top-0.5 bottom-0.5 left-0 opacity-50 bg-gray-500 rounded-full transition-transform duration-300 ease-in-out w-1/2 ${
@@ -116,7 +116,7 @@ export default function Navbar() {
           </span>
         </button> */}
 
-        <div className="relative">
+        <div className="relative bg-red-500">
           <button
             className="text-white focus:outline-none relative flex items-center justify-center w-10 h-10"
             onClick={toggleDropdown}
