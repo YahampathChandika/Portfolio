@@ -65,7 +65,7 @@ export default function Navbar() {
       </div>
 
       {/* Desktop View: LinkedIn and Resume */}
-      <div className="hidden md:flex font-semibold justify-between">
+      <div className="hidden md:flex font-semibold justify-between text-white">
         <a
           href="https://www.linkedin.com/in/yahampath-chandika/"
           target="_blank"
@@ -89,12 +89,12 @@ export default function Navbar() {
       <div className="md:hidden" ref={dropdownRef}>
         <div className="relative">
           <button
-            className="text-white focus:outline-none relative flex items-center justify-center w-10 h-10"
+            className="text-white focus:outline-none relative flex items-center justify-center w-10 h-10 border border-1 bg-slate-900 rounded-full"
             onClick={toggleDropdown}
           >
             {/* Alternate Email Icon */}
             <span
-              className={`material-symbols-outlined text-3xl transition-all duration-300 ease-in-out transform ${
+              className={`material-symbols-outlined text-2xl transition-all duration-300 ease-in-out transform ${
                 dropdownOpen
                   ? "rotate-90 opacity-0 scale-75"
                   : "rotate-0 opacity-100 scale-100"
@@ -105,7 +105,7 @@ export default function Navbar() {
 
             {/* Close Icon */}
             <span
-              className={`material-symbols-outlined text-3xl transition-all duration-300 ease-in-out transform absolute ${
+              className={`material-symbols-outlined text-2xl transition-all duration-300 ease-in-out transform absolute ${
                 dropdownOpen
                   ? "rotate-0 opacity-100 scale-100"
                   : "-rotate-90 opacity-0 scale-75"
