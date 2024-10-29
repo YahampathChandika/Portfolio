@@ -69,7 +69,11 @@ export default function Projects() {
           }
           whileInView={{ x: 0, y: 0, opacity: 1 }}
           transition={{ duration: 0.8, ease: "easeInOut" }}
-          viewport={{ once: false, amount: 0.5 }}
+          viewport={
+            isMobile
+              ? { once: false, amount: 0.2 }
+              : { once: false, amount: 0.5 }
+          }
         >
           <div className="flex justify-between items-center mb-8">
             <p className="font-semibold text-2xl md:text-3xl">
@@ -93,9 +97,7 @@ export default function Projects() {
             </div>
 
             <div className="w-full md:w-1/2 text-gray-400">
-              <p className="text-base md:text-xl mb-6">
-                {project.description}
-              </p>
+              <p className="text-base md:text-xl mb-6">{project.description}</p>
 
               <div className="mb-4">
                 <h3 className="text-base md:text-xl font-semibold mb-2">
