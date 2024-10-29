@@ -130,7 +130,7 @@ export default function Projects() {
                     alt="GitHub"
                     className="w-6 md:w-10 h-6 md:h-10 rounded-full border border-gray-300"
                   />
-                  <p className="ml-4">Code</p>
+                  <p className="ml-2 md:ml-4">Code</p>
                 </a>
                 <a
                   href={project.demoLink}
@@ -141,7 +141,7 @@ export default function Projects() {
                   <span className="material-symbols-outlined text-xl md:text-3xl rounded-full border border-gray-300 w-6 md:w-10 h-6 md:h-10 flex items-center justify-center">
                     laptop_mac
                   </span>
-                  <p className="ml-4">Demo</p>
+                  <p className="ml-2 md:ml-4">Demo</p>
                 </a>
               </div>
             </div>
