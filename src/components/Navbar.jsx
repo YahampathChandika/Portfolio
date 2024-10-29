@@ -96,7 +96,7 @@ export default function Navbar() {
           </span>
         </button> */}
 
-        <button
+        {/* <button
           className="text-white focus:outline-none min-w-4"
           onClick={toggleDropdown}
         >
@@ -114,7 +114,36 @@ export default function Navbar() {
           >
             close
           </span>
-        </button>
+        </button> */}
+
+        <div className="relative">
+          <button
+            className="text-white focus:outline-none relative flex items-center justify-center w-10 h-10"
+            onClick={toggleDropdown}
+          >
+            {/* Alternate Email Icon */}
+            <span
+              className={`material-symbols-outlined text-3xl transition-all duration-300 ease-in-out transform ${
+                dropdownOpen
+                  ? "rotate-90 opacity-0 scale-75"
+                  : "rotate-0 opacity-100 scale-100"
+              }`}
+            >
+              alternate_email
+            </span>
+
+            {/* Close Icon */}
+            <span
+              className={`material-symbols-outlined text-3xl transition-all duration-300 ease-in-out transform absolute ${
+                dropdownOpen
+                  ? "rotate-0 opacity-100 scale-100"
+                  : "-rotate-90 opacity-0 scale-75"
+              }`}
+            >
+              close
+            </span>
+          </button>
+        </div>
 
         {/* Dropdown Menu with Transition */}
         <div
