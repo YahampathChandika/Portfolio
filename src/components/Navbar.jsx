@@ -191,7 +191,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`sticky top-0 z-50 flex justify-between items-center px-3 md:px-10 py-0 md:py-5 transition-transform duration-300 ${
+      className={`sticky top-0 z-50 flex justify-between items-center px-3 md:px-10 py-5 transition-transform duration-300 ${
         isNavbarVisible ? "translate-y-0" : "-translate-y-full"
       }`}
     >
