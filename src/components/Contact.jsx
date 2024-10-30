@@ -75,7 +75,7 @@ export default function Contact() {
       </div>
 
       {/* Footer Bottom Section */}
-      <div className="mb-10 py-8 flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
+      <div className="pt-8 flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
         {/* Copyright */}
         <p className="text-gray-500 text-sm">
           © {new Date().getFullYear()} Yahampath Chandika. All Rights Reserved.
