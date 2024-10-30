@@ -48,8 +48,15 @@
     ],
     "techStack": ["React", "Tailwind CSS", "Vercel"],
     "images": [
-      "https://blog.openreplay.com/images/creating-a-simple-carousel-with-react-slick/images/hero.png",
-      "https://blog.openreplay.com/images/creating-a-simple-carousel-with-react-slick/images/hero.png"
+      "admitted",
+      "chartview",
+      "overview",
+      "patients",
+      "reg1",
+      "reg2",
+      "tableview",
+      "userReg",
+      "users"
     ],
     "codeLink": "https://github.com/example/portfolio",
     "demoLink": "https://portfolio.demo.com"

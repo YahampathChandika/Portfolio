@@ -2,11 +2,12 @@ import React from "react";
 
 export default function Contact() {
   return (
-    <div className="w-full px-6 md:px-20 lg:px-48 pb-10 md:pb-20 flex flex-col md:flex-row md:justify-between items-center space-y-10 md:space-y-0 md:space-x-10">
-      
+    <div className="w-full px-6 md:px-20 lg:px-48 py-10 md:py-40 flex flex-col md:flex-row md:justify-between items-center space-y-10 md:space-y-0 md:space-x-10">
       {/* Left Section */}
       <div className="flex flex-col w-full md:w-1/2 text-center md:text-left">
-        <p className="text-white text-4xl md:text-5xl font-bold">Get in Touch</p>
+        <p className="text-white text-4xl md:text-5xl font-bold">
+          Get in Touch
+        </p>
         <p className="text-white text-base md:text-lg mt-4 mb-8">
           I’m always open to new opportunities and challenges.
         </p>
@@ -50,23 +51,27 @@ export default function Contact() {
 
       {/* Email Button */}
       <div
-        className="w-full md:w-1/6 bg-white p-8 md:p-10 rounded-xl flex items-center justify-center text-center cursor-pointer neon-hover neon-border shadow-neon"
+        className="w-full md:w-1/6 bg-white p-8 md:p-10 rounded-xl flex items-center justify-center text-center cursor-pointer transition-all duration-300 hover:scale-105 neon-hover neon-border shadow-neon"
         onClick={() => window.open("mailto:yhmpth@gmail.com", "_self")}
       >
         <div className="flex flex-col text-black">
           <i className="far fa-envelope text-3xl md:text-4xl"></i>
-          <p className="text-sm md:text-lg mt-4 font-semibold">yhmpth@gmail.com</p>
+          <p className="text-sm md:text-lg mt-4 font-semibold">
+            yhmpth@gmail.com
+          </p>
         </div>
       </div>
 
       {/* Phone Button */}
       <div
-        className="w-full md:w-1/6 bg-white p-8 md:p-10 rounded-xl flex items-center justify-center text-center cursor-pointer neon-hover neon-border shadow-neon"
+        className="w-full md:w-1/6 bg-white p-8 md:p-10 rounded-xl flex items-center justify-center text-center cursor-pointer transition-all duration-300 hover:scale-105 neon-hover neon-border shadow-neon"
         onClick={() => window.open("tel:+94779817119", "_self")}
       >
         <div className="flex flex-col text-black">
           <i className="fas fa-phone text-3xl md:text-4xl"></i>
-          <p className="text-sm md:text-lg mt-4 font-semibold">+94 77 98 17 119</p>
+          <p className="text-sm md:text-lg mt-4 font-semibold">
+            +94 77 98 17 119
+          </p>
         </div>
       </div>
     </div>
