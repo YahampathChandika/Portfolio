@@ -3,13 +3,45 @@ import Slider from "react-slick";
 import { motion, useAnimation } from "framer-motion"; // Import useAnimation
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import gitHub from "../assets/images/github.png";
 import projectsData from "../assets/data/projectsData.json";
+
+import admitted from "../assets/images/admitted.png";
+import chartview from "../assets/images/chartview.png";
+import overview from "../assets/images/overview.png";
+import patients from "../assets/images/patients.png";
+import reg1 from "../assets/images/reg1.png";
+import reg2 from "../assets/images/reg2.png";
+import tableview from "../assets/images/tableview.png";
+import userReg from "../assets/images/userReg.png";
+import users from "../assets/images/users.png";
+
+import medi1 from "../assets/images/medi1.png";
+import medi2 from "../assets/images/medi2.png";
+import medi3 from "../assets/images/medi3.png";
+import medi4 from "../assets/images/medi4.png";
+import medi5 from "../assets/images/medi5.png";
 
 export default function Projects() {
   const [projects, setProjects] = useState([]);
-  const controls = useAnimation(); // For responsive animations
   const [isMobile, setIsMobile] = useState(false);
+
+  const imageMap = {
+    admitted: admitted,
+    chartview: chartview,
+    overview: overview,
+    patients: patients,
+    reg1: reg1,
+    reg2: reg2,
+    tableview: tableview,
+    userReg: userReg,
+    users: users,
+
+    medi1: medi1,
+    medi2: medi2,
+    medi3: medi3,
+    medi4: medi4,
+    medi5: medi5,
+  };
 
   useEffect(() => {
     setProjects(projectsData);
@@ -24,7 +56,7 @@ export default function Projects() {
 
   const PrevArrow = ({ onClick }) => (
     <span
-      className="hidden material-symbols-outlined absolute w-8 h-8 md:flex justify-center items-center top-1/2 -translate-y-1/2 bg-black/40 text-white text-xl rounded-full p-2 cursor-pointer transition-all duration-300 ease-in-out z-20 left-2"
+      className="hidden material-symbols-outlined absolute w-8 h-8 md:flex justify-center items-center top-1/2 -translate-y-1/2 text-slate-500 text-5xl rounded-full p-2 cursor-pointer transition-all duration-300 ease-in-out z-20 left-2"
       onClick={onClick}
     >
       keyboard_arrow_left
@@ -33,7 +65,7 @@ export default function Projects() {
 
   const NextArrow = ({ onClick }) => (
     <span
-      className="hidden material-symbols-outlined absolute w-8 h-8 md:flex justify-center items-center top-1/2 -translate-y-1/2 bg-black/40 text-white text-xl rounded-full p-2 cursor-pointer transition-all duration-300 ease-in-out z-20 right-2"
+      className="hidden material-symbols-outlined absolute w-8 h-8 md:flex justify-center items-center top-1/2 -translate-y-1/2 text-slate-500 text-5xl rounded-full p-2 cursor-pointer transition-all duration-300 ease-in-out z-20 right-2"
       onClick={onClick}
     >
       keyboard_arrow_right
@@ -81,14 +113,14 @@ export default function Projects() {
           </div>
 
           <div className="flex flex-col md:flex-row md:space-x-10 space-y-6 md:space-y-0">
-            <div className="w-full md:w-1/2">
+            <div className="w-full md:w-1/2 content-center">
               <Slider {...sliderSettings}>
-                {project.images.map((image, idx) => (
+                {project.images.map((imageKey, idx) => (
                   <div key={idx}>
                     <img
-                      src={image}
+                      src={imageMap[imageKey]}
                       alt={`Project Snapshot ${idx + 1}`}
-                      className="rounded-lg"
+                      className="rounded-lg w-full"
                     />
                   </div>
                 ))}
@@ -96,10 +128,10 @@ export default function Projects() {
             </div>
 
             <div className="w-full md:w-1/2 text-gray-400">
-              <p className="text-base md:text-xl mb-6">{project.description}</p>
+              <p className="text-base md:text-xl mb-8">{project.description}</p>
 
-              <div className="mb-4">
-                <h3 className="text-base md:text-xl font-semibold mb-2">
+              <div className="mb-8">
+                <h3 className="text-base md:text-xl font-semibold mb-2 text-white">
                   Key Features
                 </h3>
                 <ul className="text-sm md:text-lg list-disc list-inside space-y-2">
@@ -110,7 +142,7 @@ export default function Projects() {
               </div>
 
               <div className="mb-4">
-                <h3 className="text-base md:text-xl font-semibold mb-2">
+                <h3 className="text-base md:text-xl font-semibold mb-2 text-white">
                   Tech Stack
                 </h3>
                 <p className="text-sm md:text-lg">
@@ -125,11 +157,7 @@ export default function Projects() {
                   rel="noopener noreferrer"
                   className="flex items-center cursor-pointer transition-all neon-hover"
                 >
-                  <img
-                    src={gitHub}
-                    alt="GitHub"
-                    className="w-6 md:w-10 h-6 md:h-10 rounded-full border border-gray-300"
-                  />
+                  <i className="fab fa-github text-xl md:text-3xl rounded-full border border-gray-300 w-6 md:w-10 h-6 md:h-10 flex items-center justify-center"></i>
                   <p className="ml-2 md:ml-4">Code</p>
                 </a>
                 <a
