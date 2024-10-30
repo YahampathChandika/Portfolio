@@ -77,7 +77,7 @@ export default function Contact() {
       {/* Footer Bottom Section */}
       <div className="pt-8 flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
         {/* Copyright */}
-        <p className="text-gray-500 text-sm">
+        <p className="text-gray-500 text-sm text-center">
           © {new Date().getFullYear()} Yahampath Chandika. All Rights Reserved.
         </p>
 
