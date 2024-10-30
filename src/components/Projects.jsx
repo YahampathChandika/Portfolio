@@ -131,8 +131,8 @@ export default function Projects() {
   return (
     <div className="bg-black w-full py-20 px-8 md:px-40 flex flex-col items-center justify-center">
       <div className="flex flex-col w-full justify-center items-start mb-20">
-        <p className="text-gray-400 text-lg mb-1 md:mb-3">My Work</p>
-        <p className="text-white text-6xl font-bold">Projects.</p>
+        <p className="text-gray-400 md:text-lg mb-1 md:mb-3">My Work</p>
+        <p className="text-white text-5xl md:text-6xl font-bold">Projects.</p>
       </div>
       {projects.map((project, index) => (
         <motion.div

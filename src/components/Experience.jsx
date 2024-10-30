@@ -8,12 +8,12 @@ import experienceData from "../assets/data/experience.json";
 
 const Experience = () => {
   return (
-    <div className="bg-black text-white py-12 px-8 md:px-40">
+    <div className="bg-black text-white py-12 px-5 md:px-40">
       <div className="flex flex-col w-full justify-center items-center mb-20 text-center">
-        <p className="text-gray-400 text-lg mb-1 md:mb-3">
+        <p className="text-gray-400 md:text-lg mb-1 md:mb-3">
           What I have done so far
         </p>
-        <p className="text-white text-6xl font-bold">Work Experience.</p>
+        <p className="text-white text-5xl md:text-6xl font-bold">Work Experience.</p>
       </div>
       <VerticalTimeline>
         {experienceData.map((experience, index) => (
@@ -43,15 +43,15 @@ const Experience = () => {
               />
             }
           >
-            <h3 className="vertical-timeline-element-title text-2xl font-bold">
+            <h3 className="vertical-timeline-element-title text-xl md:text-2xl font-bold">
               {experience.title}
             </h3>
-            <h4 className="vertical-timeline-element-subtitle text-lg text-gray-400">
+            <h4 className="vertical-timeline-element-subtitle  md:text-lg text-gray-400">
               {experience.company}
             </h4>
             <ul className="mt-3 list-disc list-inside">
               {experience.description.map((desc, idx) => (
-                <li key={idx} className="text-gray-300 text-lg mb-3">
+                <li key={idx} className="text-gray-300 text-sm md:text-lg mb-3">
                   {desc}
                 </li>
               ))}
