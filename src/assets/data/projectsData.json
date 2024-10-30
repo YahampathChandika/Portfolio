@@ -25,14 +25,14 @@
   },
 
   {
-    "title": "Supercar Store Website",
-    "description": "An e-commerce website for showcasing and selling supercars.",
+    "title": "Medical Laboratory Management System",
+    "description": "A web application to streamline lab operations and data management.",
     "features": [
       "Responsive design for desktop and mobile",
       "Admin dashboard for managing inventory",
       "Integration with payment gateways"
     ],
-    "techStack": ["React", "Node.js", "MySQL", "AWS", "Tailwind CSS"],
+    "techStack": ["React", "Redux", "Node.js", "Sequelize ORM", "Express", "MySQL", "AWS", "Tailwind CSS"],
     "images": ["medi1", "medi2", "medi3", "medi4", "medi5"],
     "codeLink": "https://github.com/example/supercar-store",
     "demoLink": "https://supercar-store.demo.com"
