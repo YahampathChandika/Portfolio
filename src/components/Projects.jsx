@@ -429,7 +429,7 @@ export default function Projects() {
           <Box sx={modalStyle}>
             {selectedProject && (
               <>
-                <p className="text-black font-semibold md:text-3xl mb-2">
+                <p className="text-black text-sm font-medium md:font-semibold md:text-3xl mb-2">
                   {selectedProject.title}
                 </p>
                 <hr className="border border-1 border-black/60 mb-6 md:mb-10" />
