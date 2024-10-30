@@ -2,78 +2,93 @@ import React from "react";
 
 export default function Contact() {
   return (
-    <div className="w-full px-6 md:px-20 lg:px-48 py-10 md:py-40 flex flex-col md:flex-row md:justify-between items-center space-y-10 md:space-y-0 md:space-x-10">
-      {/* Left Section */}
-      <div className="flex flex-col w-full md:w-1/2 text-center md:text-left">
-        <p className="text-white text-4xl md:text-5xl font-bold">
-          Get in Touch
-        </p>
-        <p className="text-white text-base md:text-lg mt-4 mb-8">
-          I’m always open to new opportunities and challenges.
-        </p>
-
-        {/* Social Media Links */}
-        <div className="flex justify-center md:justify-start space-x-6 text-3xl text-white">
-          <a
-            href="https://www.linkedin.com/in/yahampath-chandika/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="neon-hover"
-          >
-            <i className="fab fa-linkedin cursor-pointer"></i>
-          </a>
-          <a
-            href="https://github.com/YahampathChandika"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="neon-hover"
-          >
-            <i className="fab fa-github cursor-pointer"></i>
-          </a>
-          <a
-            href="https://www.facebook.com/yahampath.2k"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="neon-hover"
-          >
-            <i className="fab fa-facebook cursor-pointer"></i>
-          </a>
-          <a
-            href="https://www.instagram.com/de_shuffler/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="neon-hover"
-          >
-            <i className="fab fa-instagram cursor-pointer"></i>
-          </a>
-        </div>
-      </div>
-
-      {/* Email Button */}
-      <div
-        className="w-full md:w-1/6 bg-white p-8 md:p-10 rounded-xl flex items-center justify-center text-center cursor-pointer transition-all duration-300 hover:scale-105 neon-hover neon-border shadow-neon"
-        onClick={() => window.open("mailto:yhmpth@gmail.com", "_self")}
-      >
-        <div className="flex flex-col text-black">
-          <i className="far fa-envelope text-3xl md:text-4xl"></i>
-          <p className="text-sm md:text-lg mt-4 font-semibold">
-            yhmpth@gmail.com
+    <footer className="w-full bg-black text-white px-6 md:px-20 lg:px-48 py-12 md:py-20">
+      <div className="border-b border-white/10 pb-8 flex flex-col md:flex-row md:justify-between items-center space-y-12 md:space-y-0">
+        {/* Left Section */}
+        <div className="w-1/2 flex flex-col items-center md:items-start text-center md:text-left space-y-6">
+          <h1 className="text-4xl md:text-5xl font-bold">Let's Connect</h1>
+          <p className="text-gray-400 text-sm md:text-base">
+            Always excited to collaborate on new projects or challenges. Feel
+            free to reach out to me through any platform below.
           </p>
+
+          {/* Social Media Links */}
+          <div className="flex space-x-6 text-xl">
+            {[
+              {
+                href: "https://www.linkedin.com/in/yahampath-chandika/",
+                icon: "fab fa-linkedin",
+              },
+              {
+                href: "https://github.com/YahampathChandika",
+                icon: "fab fa-github",
+              },
+              {
+                href: "https://www.facebook.com/yahampath.2k",
+                icon: "fab fa-facebook",
+              },
+              {
+                href: "https://www.instagram.com/de_shuffler/",
+                icon: "fab fa-instagram",
+              },
+            ].map((social, index) => (
+              <a
+                key={index}
+                href={social.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:neon-hover transition-all duration-300 text-3xl"
+              >
+                <i className={social.icon}></i>
+              </a>
+            ))}
+          </div>
+        </div>
+
+        {/* Contact Cards */}
+        <div className="md:flex items-center space-y-8 md:space-x-6 justify-between w-10/12 md:w-1/3">
+          {/* Email Card */}
+          <div
+            className="w-full md:w-1/2 bg-white p-8 md:p-6 rounded-xl flex items-center justify-center text-center cursor-pointer transition-all duration-300 hover:scale-105 neon-hover neon-border shadow-neon"
+            onClick={() => window.open("mailto:yhmpth@gmail.com", "_self")}
+          >
+            <div className="flex flex-col text-black">
+              <i className="far fa-envelope text-3xl md:text-4xl"></i>
+              <p className="text-sm md:text-lg mt-4 font-semibold">
+                yhmpth@gmail.com
+              </p>
+            </div>
+          </div>
+          {/* Phone Card */}
+          <div
+            className="w-full md:w-1/2 bg-white p-8 md:p-6 rounded-xl flex items-center justify-center text-center cursor-pointer transition-all duration-300 hover:scale-105 neon-hover neon-border shadow-neon"
+            onClick={() => window.open("tel:+94779817119", "_self")}
+          >
+            <div className="flex flex-col text-black">
+              <i className="fas fa-phone text-3xl md:text-4xl"></i>
+              <p className="text-sm md:text-lg mt-4 font-semibold">
+                +94 77 98 17 119
+              </p>
+            </div>
+          </div>
         </div>
       </div>
 
-      {/* Phone Button */}
-      <div
-        className="w-full md:w-1/6 bg-white p-8 md:p-10 rounded-xl flex items-center justify-center text-center cursor-pointer transition-all duration-300 hover:scale-105 neon-hover neon-border shadow-neon"
-        onClick={() => window.open("tel:+94779817119", "_self")}
-      >
-        <div className="flex flex-col text-black">
-          <i className="fas fa-phone text-3xl md:text-4xl"></i>
-          <p className="text-sm md:text-lg mt-4 font-semibold">
-            +94 77 98 17 119
-          </p>
-        </div>
+      {/* Footer Bottom Section */}
+      <div className="mb-10 py-8 flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
+        {/* Copyright */}
+        <p className="text-gray-500 text-sm">
+          © {new Date().getFullYear()} Yahampath Chandika. All Rights Reserved.
+        </p>
+
+        {/* Back to Top Button */}
+        <button
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          className="text-sm font-semibold hover:text-gray-400 transition duration-300"
+        >
+          Back to Top ↑
+        </button>
       </div>
-    </div>
+    </footer>
   );
 }
