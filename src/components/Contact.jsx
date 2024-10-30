@@ -46,7 +46,7 @@ export default function Contact() {
         </div>
 
         {/* Contact Cards */}
-        <div className="md:flex items-center space-y-8 md:space-x-6 justify-between w-10/12 md:w-1/3">
+        <div className="md:flex items-center space-y-8 md:space-y-0 md:space-x-6 justify-between w-10/12 md:w-1/3">
           {/* Email Card */}
           <div
             className="w-full md:w-1/2 bg-white p-8 md:p-6 rounded-xl flex items-center justify-center text-center cursor-pointer transition-all duration-300 hover:scale-105 neon-hover neon-border shadow-neon"
