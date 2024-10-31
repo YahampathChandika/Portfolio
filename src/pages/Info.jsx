@@ -1,10 +1,12 @@
 import React from "react";
-import Hero from "../components/work/Hero";
+import Skills from "../components/info/Skills";
+import About from "../components/info/About";
 
 export default function Info() {
   return (
     <div>
-      <Hero />
+      <About />
+      <Skills />
     </div>
   );
 }
