@@ -50,8 +50,8 @@ export default function About() {
       <div className="absolute inset-0 bg-gradient-to-b from-black/80 to-black/60"></div>
 
 
-      <div className="relative z-10 w-full max-w-lg text-center md:text-right px-4 md:px-6 lg:pr-16">
-        <div className="flex items-center justify-center md:justify-end gap-2 mb-4 md:mb-6">
+      <div className="relative z-10 w-full max-w-lg  md:text-right px-4 md:px-6 lg:pr-16">
+        <div className="flex items-center  justify-end gap-2 mb-4 md:mb-6">
           <span className="relative flex h-3 w-3">
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
             <span className="relative inline-flex rounded-full h-3 w-3 bg-white"></span>
@@ -61,7 +61,7 @@ export default function About() {
           </h2>
         </div>
 
-        <p className="text-gray-200 text-base md:text-lg lg:text-xl leading-relaxed">
+        <p className="text-gray-200 text-right text-base md:text-lg lg:text-xl leading-relaxed">
           Hi, I’m Yahampath, a Full-Stack Developer with a passion for crafting
           seamless digital solutions that blend functionality with aesthetic
           appeal. With hands-on experience across both front-end and back-end
