@@ -21,10 +21,10 @@ export default function HeroSection() {
       `}</style> */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/10 to-black/70" />
       <div className="relative text-left w-10/12  p-5 md:p-10 mx-auto z-10">
-        <h1 className="text-white text-5xl md:text-7xl font-bold leading-tight mb-4  animate-pulse">
+        <h1 className="text-white text-3xl md:text-7xl font-bold leading-tight mb-4  animate-pulse">
           Hi, I’m Yahampath
         </h1>
-        <p className="text-gray-300 text-lg md:text-2xl mb-6">
+        <p className="text-gray-300 text-base md:text-2xl mb-6">
           A Full-Stack Developer creating functional and aesthetic digital
           solutions.
         </p>
