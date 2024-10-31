@@ -93,7 +93,6 @@ export default function Skills() {
     rows: 2,
     slidesToShow: 4,
     slidesToScroll: 1,
-    rows: 2,
     swipeToSlide: true,
     responsive: [
       {
