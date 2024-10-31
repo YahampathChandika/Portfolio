@@ -62,7 +62,7 @@ export default function Skills() {
 
         <Slider {...settings}>
           {skills.map((skill, index) => (
-            <div key={index} className="p-5">
+            <div key={index} className="p-3 md:p-5">
               <div className="flex flex-col items-center p-5 rounded-lg bg-gray-800 hover:bg-gray-700 transition duration-300 ease-in-out shadow-lg neon-border shadow-neon">
                 <i className={`${skill.icon} text-5xl text-blue-400 mb-4`}></i>
                 <p className="text-lg font-semibold">{skill.name}</p>
