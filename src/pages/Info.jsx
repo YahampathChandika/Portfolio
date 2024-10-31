@@ -1,6 +1,6 @@
 import React from "react";
 import About from "../components/info/About";
-import Skills from "../components/info/skills";
+import Skills from "../components/info/Skills";
 
 export default function Info() {
   return (
