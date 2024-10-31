@@ -28,7 +28,7 @@ export default function Skills() {
     { name: "Next.js", icon: "fas fa-layer-group" },
     { name: "Firebase", icon: "fas fa-fire" },
     { name: "PHP", icon: "fab fa-php" },
-    { name: "REST API", icon: "fas fa-link" },
+    { name: "REST", icon: "fas fa-link" },
   ];
 
   const settings = {
