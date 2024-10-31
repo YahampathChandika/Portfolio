@@ -47,7 +47,7 @@ export default function About() {
       }}
     >
       {/* <div className="absolute inset-0 bg-black opacity-70"></div> */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/80 to-black/30"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-black/80 to-black/60"></div>
 
 
       <div className="relative z-10 w-full max-w-lg text-center md:text-right px-4 md:px-6 lg:pr-16">
@@ -61,7 +61,7 @@ export default function About() {
           </h2>
         </div>
 
-        <p className="text-gray-300 text-base md:text-lg lg:text-xl leading-relaxed">
+        <p className="text-gray-200 text-base md:text-lg lg:text-xl leading-relaxed">
           Hi, I’m Yahampath, a Full-Stack Developer with a passion for crafting
           seamless digital solutions that blend functionality with aesthetic
           appeal. With hands-on experience across both front-end and back-end
