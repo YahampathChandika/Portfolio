@@ -56,7 +56,7 @@ export default function Skills() {
     <section className="bg-black text-white py-20">
       <div className="container mx-auto px-6">
         <div className="flex flex-col w-full justify-center items-start mb-10">
-          <p className="text-gray-400 md:text-lg mb-1">My Work</p>
+          <p className="text-gray-400 md:text-lg mb-1">My Tech</p>
           <p className="text-white text-5xl md:text-6xl font-bold">Skills.</p>
         </div>
 
