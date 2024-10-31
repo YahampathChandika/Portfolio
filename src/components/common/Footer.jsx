@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Contact() {
+export default function Footer() {
   return (
     <footer className="w-full bg-black text-white px-6 md:px-20 lg:px-48 py-12 md:py-20">
       <div className="border-b border-white/10 pb-8 flex flex-col md:flex-row md:justify-between items-center space-y-12 md:space-y-0">

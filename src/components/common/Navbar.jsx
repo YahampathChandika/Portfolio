@@ -1,11 +1,16 @@
 import { useState, useEffect, useRef } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 
 export default function Navbar() {
-  const [activeTab, setActiveTab] = useState("work");
+  const location = useLocation();
+  const initialTab = location.pathname === "/info" ? "info" : "work";
+  const [activeTab, setActiveTab] = useState(initialTab);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [isNavbarVisible, setNavbarVisible] = useState(true); // Control navbar visibility
   const lastScrollTop = useRef(0); // Store the last scroll position
   const dropdownRef = useRef(null);
+
+  const navigate = useNavigate();
 
   // Handle outside clicks for dropdown close
   useEffect(() => {
@@ -73,7 +78,10 @@ export default function Navbar() {
             className={`relative z-10 py-2 text-sm w-1/2 font-medium glow-text neon-hover rounded-full transition-colors duration-300 hover:text-white ${
               activeTab === "work" ? "text-white" : "text-gray-400"
             }`}
-            onClick={() => setActiveTab("work")}
+            onClick={() => {
+              setActiveTab("work");
+              navigate("/");
+            }}
           >
             Work
           </button>
@@ -82,7 +90,10 @@ export default function Navbar() {
             className={`relative z-10 px-4 py-2 text-sm w-1/2 font-medium glow-text neon-hover rounded-full transition-colors duration-300 hover:text-white ${
               activeTab === "info" ? "text-white" : "text-gray-400"
             }`}
-            onClick={() => setActiveTab("info")}
+            onClick={() => {
+              setActiveTab("info");
+              navigate("/info");
+            }}
           >
             Info
           </button>

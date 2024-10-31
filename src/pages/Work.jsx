@@ -1,18 +1,16 @@
 import React from "react";
-import Projects from "../components/Projects";
-import Navbar from "../components/Navbar";
-import Contact from "../components/Contact";
-import Experience from "../components/Experience";
-import Hero from "../components/Hero";
+import Projects from "../components/work/Projects";
+import Footer from "../components/common/Footer";
+import Experience from "../components/work/Experience";
+import Hero from "../components/work/Hero";
 
 export default function Work() {
   return (
-    <div className="">
-      <Navbar />
+    <div>
       <Hero />
       <Projects />
       <Experience />
-      <Contact />
+      <Footer />
     </div>
   );
 }
