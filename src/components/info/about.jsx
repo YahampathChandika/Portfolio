@@ -1,41 +1,73 @@
+// import React from "react";
+// import aboutImg from "../../assets/images/about.jpg";
+
+// export default function About() {
+//   return (
+//     <section
+//       className="relative flex items-center justify-end min-h-screen bg-fixed bg-cover bg-center -mt-32 p-10"
+//       style={{
+//         backgroundImage: `url(${aboutImg})`,
+//       }}
+//     >
+//       <div className="absolute inset-0 bg-black opacity-70"></div>
+
+//       <div className="relative z-10 w-full max-w-lg text-right pr-6 md:pr-16">
+//         <div className="flex items-center justify-end gap-2 mb-6">
+//           <span class="relative flex h-3 w-3">
+//             <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
+//             <span class="relative inline-flex rounded-full h-3 w-3 bg-white"></span>
+//           </span>
+//           <h2 className="text-4xl md:text-5xl font-bold text-white tracking-wider">
+//             About Me
+//           </h2>
+//         </div>
+
+//         <p className="text-gray-300 text-lg md:text-xl leading-relaxed">
+//           Hi, I’m Yahampath, a Full-Stack Developer with a passion for crafting
+//           seamless digital solutions that blend functionality with aesthetic
+//           appeal. With hands-on experience across both front-end and back-end
+//           development, I’m dedicated to turning complex ideas into simple,
+//           impactful digital experiences.
+//         </p>
+//       </div>
+//     </section>
+//   );
+// }
+
+
 import React from "react";
+import aboutImg from "../../assets/images/about.jpg";
 
 export default function About() {
   return (
-    <section className="min-h-screen flex items-center justify-center bg-black text-white py-16 px-6">
-      <div className="max-w-3xl mx-auto text-center">
-        <h2 className="text-4xl md:text-5xl font-bold mb-6 tracking-wide border-b-4 border-white inline-block pb-2">
-          About Me
-        </h2>
-        <p className="text-lg md:text-xl text-gray-400 leading-relaxed mb-8 mt-4">
-          I’m Yahampath, a passionate Full-Stack Developer dedicated to creating
-          seamless and impactful digital experiences. With expertise across front-end
-          and back-end development, I enjoy transforming complex challenges into functional, aesthetic solutions.
+    <section
+      className="relative flex items-center justify-center md:justify-end min-h-screen bg-fixed bg-cover bg-center -mt-32 p-6 md:p-10"
+      style={{
+        backgroundImage: `url(${aboutImg})`,
+      }}
+    >
+      {/* <div className="absolute inset-0 bg-black opacity-70"></div> */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/80 to-black/30"></div>
+
+
+      <div className="relative z-10 w-full max-w-lg text-center md:text-right px-4 md:px-6 lg:pr-16">
+        <div className="flex items-center justify-center md:justify-end gap-2 mb-4 md:mb-6">
+          <span className="relative flex h-3 w-3">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
+            <span className="relative inline-flex rounded-full h-3 w-3 bg-white"></span>
+          </span>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white tracking-wider">
+            About Me
+          </h2>
+        </div>
+
+        <p className="text-gray-300 text-base md:text-lg lg:text-xl leading-relaxed">
+          Hi, I’m Yahampath, a Full-Stack Developer with a passion for crafting
+          seamless digital solutions that blend functionality with aesthetic
+          appeal. With hands-on experience across both front-end and back-end
+          development, I’m dedicated to turning complex ideas into simple,
+          impactful digital experiences.
         </p>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
-          <div>
-            <h3 className="text-2xl font-semibold mb-3">Experience</h3>
-            <p className="text-gray-400 leading-relaxed">
-              Over 2 years of hands-on experience in software development, working on projects from concept to deployment. Skilled in React, Node.js, and cloud solutions.
-            </p>
-          </div>
-
-          <div>
-            <h3 className="text-2xl font-semibold mb-3">Interests</h3>
-            <p className="text-gray-400 leading-relaxed">
-              Aside from coding, I’m interested in AI advancements, UI/UX design, and enjoy exploring new tech trends that enhance user experiences.
-            </p>
-          </div>
-        </div>
-
-        <div className="flex justify-center items-center mt-12">
-          <div className="w-16 h-16 rounded-full bg-white animate-ping inline-flex items-center justify-center">
-            <span className="material-symbols-outlined text-black text-3xl">
-              person
-            </span>
-          </div>
-        </div>
       </div>
     </section>
   );

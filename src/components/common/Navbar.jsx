@@ -55,7 +55,7 @@ export default function Navbar() {
       {/* Logo and Name */}
       <div className="flex items-center">
         <img
-          className="h-auto w-20 md:mr-5 neon-border"
+          className="h-auto w-20 md:mr-5 neon-border rounded-full p-2"
           src="https://cdn.vectorstock.com/i/500p/80/27/yc-logo-monogram-design-template-vector-38558027.jpg"
           alt="logo"
         />
