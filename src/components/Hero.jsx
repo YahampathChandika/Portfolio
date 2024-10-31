@@ -47,17 +47,21 @@ export default function HeroSection() {
         </div> */}
       </div>
       <div
-  className="absolute bottom-20 cursor-pointer"
-  onClick={() => window.scrollBy({ top: window.innerHeight * 0.8, behavior: "smooth" })}
->
-  <div className="animate-bounce text-gray-400 text-center">
-    <span className="material-symbols-outlined text-4xl">
-      expand_more
-    </span>
-  </div>
-  <p className="text-gray-400">Scroll Down</p>
-</div>
-
+        className="absolute bottom-20 cursor-pointer"
+        onClick={() =>
+          window.scrollBy({
+            top: window.innerHeight * 0.85,
+            behavior: "smooth",
+          })
+        }
+      >
+        <div className="animate-bounce text-gray-400 text-center">
+          <span className="material-symbols-outlined text-4xl">
+            expand_more
+          </span>
+        </div>
+        <p className="text-gray-400">Scroll Down</p>
+      </div>
     </section>
   );
 }
