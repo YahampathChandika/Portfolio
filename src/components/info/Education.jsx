@@ -49,7 +49,8 @@ export default function Education() {
                 boxShadow: "0 0 15px rgba(255, 255, 255, 0.1)",
                 border: "2px solid rgba(255, 255, 255, 0.3)",
                 borderRadius: "10px",
-                padding: "40px 0 40px 30px",
+                paddingTop: "40px",
+                paddingBottom: "40px",
               }}
               contentArrowStyle={{ borderRight: "7px solid #fff" }}
               date={edu.year}
@@ -63,9 +64,9 @@ export default function Education() {
                 />
               }
             >
-              <h3 className="text-2xl font-bold mb-2">{edu.institution}</h3>
-              <h4 className="text-gray-200 text-lg mb-1">{edu.degree}</h4>
-              <p className="text-gray-400 text-sm font-light">{edu.grade}</p>
+              <h3 className="text-xl md:text-2xl font-bold mb-2">{edu.institution}</h3>
+              <h4 className="text-gray-200 md:text-lg mb-1">{edu.degree}</h4>
+              <p className="text-gray-400 text-sm md:text-lg font-light">{edu.grade}</p>
             </VerticalTimelineElement>
           ))}
         </VerticalTimeline>
