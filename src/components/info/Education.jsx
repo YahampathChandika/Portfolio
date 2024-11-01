@@ -10,7 +10,7 @@ export default function Education() {
   const education = [
     {
       institution: "NSBM Green University Town",
-      degree: "B.Sc. Engineering Honours in Computer System Engineering",
+      degree: "B.Sc. Engineering Honours in Computer Systems Engineering",
       year: "2024",
       logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzMusNEftMbTRViAvsf9E2hevtoFoTcYmxHA&s",
       grade: "GPA: 2.0",
@@ -20,7 +20,7 @@ export default function Education() {
       degree: "G.C.E. Advanced Level - Physical Science",
       year: "2019",
       logo: "https://pbs.twimg.com/profile_images/1485903050317647876/wLIsadjz_400x400.jpg",
-      grade: "Combined Mathematics - A | Chemistry - B | Physics - C",
+      grade: "C. Mathematics - A | Chemistry - B | Physics - C",
     },
     {
       institution: "Richmond College",
