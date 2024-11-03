@@ -68,9 +68,9 @@ export default function Skills() {
 // Skill Card Component
 function SkillCard({ skill }) {
   return (
-    <div className="flex flex-col items-center p-5 rounded-lg w-28 md:w-48 neon-border transition duration-300 ease-in-out shadow-lg neon-hover mx-4">
-      <i className={`${skill.icon} text-5xl text-white mb-4`}></i>
-      <p className="text-lg font-semibold">{skill.name}</p>
+    <div className="flex flex-col items-center p-5 rounded-lg w-20 md:w-48 neon-border transition duration-300 ease-in-out shadow-lg neon-hover mx-4">
+      <i className={`${skill.icon} text-3xl md:text-5xl text-white mb-4`}></i>
+      <p className="md:text-lg font-semibold">{skill.name}</p>
     </div>
   );
 }

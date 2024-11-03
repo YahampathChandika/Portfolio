@@ -1,72 +1,177 @@
-import React from "react";
-import { useSpring, animated as a } from "@react-spring/web";
-import { useDrag } from "react-use-gesture";
-import cert1Img from "../../assets/images/hero.jpg"; 
-import cert2Img from "../../assets/images/hero.jpg";
-import cert3Img from "../../assets/images/hero.jpg";
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { Box, Modal, Fade, Backdrop } from "@mui/material";
+import admitted from "../../assets/images/admitted.png";
+import chartview from "../../assets/images/chartview.png";
+import overview from "../../assets/images/overview.png";
 
 const certificates = [
-  { title: "React Developer", institution: "Coursera", image: cert1Img },
-  { title: "Full Stack Web Development", institution: "edX", image: cert2Img },
-  { title: "AWS Certified Solutions Architect", institution: "Amazon", image: cert3Img },
-  { title: "React Developer", institution: "Coursera", image: cert1Img },
-  { title: "Full Stack Web Development", institution: "edX", image: cert2Img },
-  { title: "AWS Certified Solutions Architect", institution: "Amazon", image: cert3Img },
-  { title: "React Developer", institution: "Coursera", image: cert1Img },
-  { title: "Full Stack Web Development", institution: "edX", image: cert2Img },
-  { title: "AWS Certified Solutions Architect", institution: "Amazon", image: cert3Img },
+  {
+    title: "Certified React Developer",
+    issuer: "Coursera",
+    year: "2023",
+    image: admitted,
+    link: "https://www.credly.com/badges/eef34be6-b727-4aab-a8b7-4c62d70dbbdc/public_url",
+  },
+  {
+    title: "AWS Certified Solutions Architect",
+    issuer: "Amazon",
+    year: "2022",
+    image: chartview,
+    link: "https://amazon.com/certificate/aws-solutions",
+  },
+  {
+    title: "Full Stack Web Developer",
+    issuer: "Udacity",
+    year: "2021",
+    image: overview,
+    link: "https://udacity.com/certificate/full-stack",
+  },
+  // Add more certificates as needed
 ];
 
 export default function Certificates() {
-  const [index, setIndex] = React.useState(0);
+  const [open, setOpen] = useState(false);
+  const [selectedCert, setSelectedCert] = useState(null);
 
-  const bind = useDrag(({ movement: [mx], direction: [xDir], distance, cancel }) => {
-    if (distance > 100) {
-      cancel();
-      setIndex((prev) => (xDir > 0 ? (prev + 1) % certificates.length : (prev - 1 + certificates.length) % certificates.length));
-    }
-  });
+  const handleOpen = (cert) => {
+    setSelectedCert(cert);
+    setOpen(true);
+  };
 
-  const { x } = useSpring({
-    x: index * -100,
-    config: { tension: 300, friction: 30 },
-  });
+  const handleClose = () => {
+    setOpen(false);
+    setSelectedCert(null);
+  };
+
+  const modalStyle = {
+    position: "absolute",
+    top: "50%",
+    left: "50%",
+    transform: "translate(-50%, -50%)",
+    width: "60%",
+    maxHeight: "95vh", // Prevent overflow on small screens
+    overflowY: "auto", // Enable scrolling if content overflows
+    bgcolor: "background.paper",
+    boxShadow: "shadow-neon",
+    border: "neon-border",
+    borderRadius: "10px",
+    p: 4,
+    outline: "none",
+
+    // Responsive styles
+    "@media (max-width: 768px)": {
+      width: "90%", // Make it wider for smaller screens
+      p: 2, // Reduce padding
+    },
+    "@media (max-width: 480px)": {
+      width: "95%", // Even more compact on very small screens
+      p: 1,
+    },
+  };
 
   return (
-    <section className="bg-red-500 text-white py-20">
-      <div className="container mx-auto px-6 text-center mb-10">
-        <p className="text-gray-400 text-lg">Achievements</p>
-        <p className="text-white text-5xl font-bold">Certificates</p>
+    <section className="bg-black text-white py-20 px-6 md:px-40">
+      <div className="container mx-auto flex flex-col items-start mb-12">
+        <p className="text-gray-400 text-lg mb-3">My Achievements</p>
+        <h2 className="text-white text-5xl font-bold">Certificates</h2>
       </div>
 
-      <div className="relative h-80 sm:h-96 overflow-hidden">
-        <a.div
-          {...bind()}
-          style={{ x }}
-          className="flex space-x-8 sm:space-x-12 justify-center items-center"
-        >
-          {certificates.map((cert, i) => (
-            <a.div
-              key={i}
-              className={`w-60 sm:w-80 h-72 sm:h-80 shadow-lg rounded-lg flex-none transform transition duration-500`}
-              style={{
-                backgroundImage: `url(${cert.image})`,
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-              }}
-            >
-                <div className="absolute bottom-0 left-0 right-0 bg-black/70 p-4 text-white rounded-b-lg">
-                  <h3 className="text-lg font-semibold">{cert.title}</h3>
-                  <p className="text-sm">{cert.institution}</p>
+      <motion.div
+        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12"
+        initial="hidden"
+        animate="visible"
+        variants={{
+          hidden: { opacity: 0, scale: 0.8 },
+          visible: {
+            opacity: 1,
+            scale: 1,
+            transition: {
+              delayChildren: 0.3,
+              staggerChildren: 0.2,
+              duration: 0.5,
+            },
+          },
+        }}
+      >
+        {certificates.map((cert, index) => (
+          <motion.div
+            key={index}
+            className="relative p-6 rounded-lg shadow-lg bg-white/10 hover:shadow-neon hover:scale-105 transition-all duration-300 border border-gray-500 cursor-pointer"
+            variants={{
+              hidden: { opacity: 0, y: 50 },
+              visible: { opacity: 1, y: 0 },
+            }}
+            whileHover={{ scale: 1.05 }}
+            onClick={() => handleOpen(cert)}
+          >
+            <img
+              src={cert.image}
+              alt={cert.title}
+              className="w-full h-60 object-cover rounded-md mb-4"
+            />
+            <div className="flex flex-col items-start text-left">
+              <h3 className="text-xl font-semibold mb-2 text-white">
+                {cert.title}
+              </h3>
+              <p className="text-gray-300 text-sm">{cert.issuer}</p>
+              <p className="text-gray-400 text-xs mt-1">{cert.year}</p>
+              <a
+                href={cert.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="absolute top-4 right-4 w-8 h-8 text-white bg-black rounded-full shadow-neon p-1 hover:text-gray-300 flex justify-center items-center"
+              >
+                <i className="fas fa-link text-sm"></i>
+              </a>
+            </div>
+          </motion.div>
+        ))}
+      </motion.div>
+
+      {/* MUI Modal */}
+      <Modal
+        open={open}
+        onClose={handleClose}
+        closeAfterTransition
+        slots={{ backdrop: Backdrop }}
+        slotProps={{ backdrop: { timeout: 500 } }}
+      >
+        <Fade in={open}>
+          <Box sx={modalStyle}>
+            {selectedCert && (
+              <>
+                <div className="flex justify-between">
+                  <p className="text-black text-sm font-medium md:font-semibold md:text-3xl mb-2">
+                    {selectedCert.title}
+                  </p>
+                  <p className="text-black text-sm font-medium md:font-medium md:text-2xl">
+                    {selectedCert.issuer} | {selectedCert.year}
+                  </p>
                 </div>
-            </a.div>
-          ))}
-        </a.div>
-      </div>
 
-      <div className="mt-6 text-center text-gray-400">
-        Drag left or right to view more
-      </div>
+                <hr className="border border-1 border-black/60 mb-6 md:mb-10" />
+                <img
+                  src={selectedCert.image}
+                  alt={"Click Link"}
+                  className="rounded-lg w-full"
+                />
+                <a
+                  href={selectedCert?.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm md:text-lg text-gray-800 hover:text-black flex items-center mt-2 justify-end"
+                >
+                  View Certificate
+                  <span class="material-symbols-outlined text-sm md:text-lg ml-1 md:ml-2">
+                    open_in_new
+                  </span>
+                </a>
+              </>
+            )}
+          </Box>
+        </Fade>
+      </Modal>
     </section>
   );
 }

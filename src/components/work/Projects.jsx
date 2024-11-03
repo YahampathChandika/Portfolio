@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import projectsData from "../../assets/data/projectsData.json";
-import { Box, Modal, Fade, Backdrop, Typography, Button } from "@mui/material";
+import { Box, Modal, Fade, Backdrop } from "@mui/material";
 import admitted from "../../assets/images/admitted.png";
 import chartview from "../../assets/images/chartview.png";
 import overview from "../../assets/images/overview.png";
