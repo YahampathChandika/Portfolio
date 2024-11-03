@@ -75,7 +75,7 @@ export default function Testimonials() {
             {testimonialsData.map((testimonial, index) => (
               <div
                 key={index}
-                className="p-4 md:p-8 !w-11/12 min-h-60 flex flex-col items-center justify-center text-center rounded-lg shadow-neon neon-border transition-all duration-300 border border-gray-500"
+                className="p-4 md:p-8 !min-w-11/12 min-h-60 flex flex-col items-center justify-center text-center rounded-lg shadow-neon neon-border transition-all duration-300 border border-gray-500"
               >
                 <p className="text-lg md:text-xl italic mb-6 text-gray-300">
                   "{testimonial.quote}"
@@ -84,7 +84,7 @@ export default function Testimonials() {
                   <img
                     src={testimonial.image}
                     alt={testimonial.name}
-                    className="w-10 md:w-20 h-10 md:h-20 rounded-full object-cover mr-5"
+                    className="w-10 md:w-20 h-10 md:h-20 rounded-full object-cover mr-4 md:mr-8"
                   />
                   <div className="text-left">
                     <p className="md:text-xl font-semibold text-white">
@@ -93,14 +93,25 @@ export default function Testimonials() {
                     <p className="text-sm md:text-lg text-gray-400">
                       {testimonial.position}
                     </p>
-                    <p className="text-sm text-gray-400">
-                      {testimonial.contact}
-                    </p>
-                    <p className="text-sm text-gray-400">
-                      <a href={`mailto:${testimonial.email}`} className="hover:text-gray-300">
-                        {testimonial.email}
-                      </a>
-                    </p>
+                    <div className="flex items-center mt-2">
+                      <span class="material-symbols-outlined text-sm md:text-lg mr-2 text-gray-400">
+                        call
+                      </span>
+                      <p className="text-sm text-gray-400 items-">
+                        {testimonial.contact}
+                      </p>
+                    </div>
+                    <div className="flex items-center">
+                      <p className="text-sm text-gray-400">
+                        <i className="far fa-envelope text-sm md:text-lg mr-2"></i>
+                        <a
+                          href={`mailto:${testimonial.email}`}
+                          className="hover:text-gray-300"
+                        >
+                          {testimonial.email}
+                        </a>
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
