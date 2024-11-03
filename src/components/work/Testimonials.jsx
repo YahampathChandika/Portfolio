@@ -102,7 +102,7 @@ export default function Testimonials() {
                     </p>
                   </div>
                 </div>
-                <div className="flex flex-col md:items-center justify-center mt-5">
+                <div className="flex flex-col md:items-center mt-5">
                   <div className="flex items-center mt-2">
                     <span class="material-symbols-outlined text-sm md:text-lg mr-2 text-gray-400">
                       call
@@ -113,7 +113,7 @@ export default function Testimonials() {
                   </div>
                   <div className="flex items-start">
                     <i className="far fa-envelope text-sm md:text-lg mr-2 text-gray-400"></i>
-                    <p className="text-sm text-gray-400 break-all">
+                    <p className="text-sm text-gray-400 break-all text-left">
                       <a
                         href={`mailto:${testimonial.email}`}
                         className="hover:text-gray-300"
