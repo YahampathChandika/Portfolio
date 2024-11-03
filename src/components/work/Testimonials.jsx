@@ -9,6 +9,8 @@ const testimonialsData = [
       "https://i.pinimg.com/originals/07/33/ba/0733ba760b29378474dea0fdbcb97107.png",
     quote:
       "A very talented developer with a strong sense of design and quality.",
+    contact: "123-456-7890",
+    email: "john.doe@example.com",
   },
   {
     name: "Jane Smith",
@@ -16,33 +18,35 @@ const testimonialsData = [
     image:
       "https://easy-peasy.ai/cdn-cgi/image/quality=80,format=auto,width=700/https://fdczvxmwwjwpwbeeqcth.supabase.co/storage/v1/object/public/images/50dab922-5d48-4c6b-8725-7fd0755d9334/3a3f2d35-8167-4708-9ef0-bdaa980989f9.png",
     quote: "Their work exceeded expectations and was delivered on time.",
+    contact: "987-654-3210",
+    email: "jane.smith@example.com",
   },
   // Add more testimonials as needed
 ];
 
 const PrevArrow = ({ onClick }) => (
-    <span
-      className="hidden material-symbols-outlined absolute md:flex justify-center items-center top-1/2 -translate-y-1/2 text-slate-500 text-3xl md:text-5xl rounded-full p-2 cursor-pointer transition-all duration-300 ease-in-out z-20 md:-left-5"
-      onClick={(e) => {
-        e.stopPropagation();
-        onClick();
-      }}
-    >
-      keyboard_arrow_left
-    </span>
-  );
+  <span
+    className="hidden material-symbols-outlined absolute md:flex justify-center items-center top-1/2 -translate-y-1/2 text-slate-500 text-3xl md:text-5xl rounded-full p-2 cursor-pointer transition-all duration-300 ease-in-out z-20 md:-left-9"
+    onClick={(e) => {
+      e.stopPropagation();
+      onClick();
+    }}
+  >
+    keyboard_arrow_left
+  </span>
+);
 
-  const NextArrow = ({ onClick }) => (
-    <span
-      className="hidden material-symbols-outlined absolute w-8 h-8 md:flex justify-center items-center top-1/2 -translate-y-1/2 text-slate-500 text-3xl md:text-5xl rounded-full p-2 cursor-pointer transition-all duration-300 ease-in-out z-20 md:-right-5"
-      onClick={(e) => {
-        e.stopPropagation();
-        onClick();
-      }}
-    >
-      keyboard_arrow_right
-    </span>
-  );
+const NextArrow = ({ onClick }) => (
+  <span
+    className="hidden material-symbols-outlined absolute w-8 h-8 md:flex justify-center items-center top-1/2 -translate-y-1/2 text-slate-500 text-3xl md:text-5xl rounded-full p-2 cursor-pointer transition-all duration-300 ease-in-out z-20 md:-right-5"
+    onClick={(e) => {
+      e.stopPropagation();
+      onClick();
+    }}
+  >
+    keyboard_arrow_right
+  </span>
+);
 
 export default function Testimonials() {
   const sliderSettings = {
@@ -67,10 +71,7 @@ export default function Testimonials() {
       </div>
       <div className="flex justify-center">
         <div className="w-full md:w-2/3 lg:w-1/2">
-          <Slider
-            {...sliderSettings}
-            className="flex  items-center text-center"
-          >
+          <Slider {...sliderSettings} className="flex items-center text-center">
             {testimonialsData.map((testimonial, index) => (
               <div
                 key={index}
@@ -91,6 +92,14 @@ export default function Testimonials() {
                     </p>
                     <p className="text-sm md:text-lg text-gray-400">
                       {testimonial.position}
+                    </p>
+                    <p className="text-sm text-gray-400">
+                      {testimonial.contact}
+                    </p>
+                    <p className="text-sm text-gray-400">
+                      <a href={`mailto:${testimonial.email}`} className="hover:text-gray-300">
+                        {testimonial.email}
+                      </a>
                     </p>
                   </div>
                 </div>
