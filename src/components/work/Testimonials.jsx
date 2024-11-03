@@ -111,12 +111,12 @@ export default function Testimonials() {
                       {testimonial.contact}
                     </p>
                   </div>
-                  <div className="flex items-center">
-                    <p className="text-sm text-gray-400">
-                      <i className="far fa-envelope text-sm md:text-lg mr-2"></i>
+                  <div className="flex items-start">
+                    <i className="far fa-envelope text-sm md:text-lg mr-2 text-gray-400"></i>
+                    <p className="text-sm text-gray-400 break-all">
                       <a
                         href={`mailto:${testimonial.email}`}
-                        className="hover:text-gray-300 text-wrap"
+                        className="hover:text-gray-300"
                       >
                         {testimonial.email}
                       </a>
