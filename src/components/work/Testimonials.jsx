@@ -73,7 +73,7 @@ export default function Testimonials() {
       >
         <p className="text-gray-400 md:text-lg mb-1 md:mb-3">What People Say</p>
         <p className="text-white text-4xl md:text-5xl font-bold">
-          Testimonials
+          Testimonials.
         </p>
       </motion.div>
       <div className="flex justify-center">
