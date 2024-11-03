@@ -1,5 +1,6 @@
 import React from "react";
 import Slider from "react-slick";
+import { motion } from "framer-motion"; // Importing framer-motion
 
 const testimonialsData = [
   {
@@ -73,36 +74,66 @@ export default function Testimonials() {
         <div className="w-full md:w-2/3 lg:w-1/2">
           <Slider {...sliderSettings} className="flex items-center text-center">
             {testimonialsData.map((testimonial, index) => (
-              <div
+              <motion.div
                 key={index}
-                className="p-4 md:p-8 !min-w-11/12 min-h-60 flex flex-col items-center justify-center text-center rounded-lg shadow-neon neon-border transition-all duration-300 border border-gray-500"
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{once: false}}
+                className="p-4 md:p-8 !w-11/12 min-h-60 flex flex-col items-center justify-center text-center rounded-lg shadow-neon neon-border transition-all duration-300 border border-gray-500"
               >
-                <p className="text-lg md:text-xl italic mb-6 text-gray-300">
+                <motion.p
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  viewport={{once: false}}
+                  transition={{ delay: 0.2, duration: 0.5 }}
+                  className="text-lg md:text-xl italic mb-6 text-gray-300"
+                >
                   "{testimonial.quote}"
-                </p>
+                </motion.p>
                 <div className="flex items-center justify-center">
-                  <img
+                  <motion.img
+                    initial={{ scale: 0.8 }}
+                    animate={{ scale: 1 }}
+                    transition={{ delay: 0.3, duration: 0.5 }}
                     src={testimonial.image}
+                    viewport={{once: false}}
                     alt={testimonial.name}
                     className="w-10 md:w-20 h-10 md:h-20 rounded-full object-cover mr-4 md:mr-8"
                   />
                   <div className="text-left">
-                    <p className="md:text-xl font-semibold text-white">
+                    <motion.p
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      viewport={{once: false}}
+                      transition={{ delay: 0.4, duration: 0.5 }}
+                      className="md:text-xl font-semibold text-white"
+                    >
                       {testimonial.name}
-                    </p>
-                    <p className="text-sm md:text-lg text-gray-400">
+                    </motion.p>
+                    <motion.p
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      viewport={{once: false}}
+                      transition={{ delay: 0.5, duration: 0.5 }}
+                      className="text-sm md:text-lg text-gray-400"
+                    >
                       {testimonial.position}
-                    </p>
+                    </motion.p>
                   </div>
                 </div>
-                <div className="flex flex-col justify-center mt-5">
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  viewport={{once: false}}
+                  transition={{ delay: 0.6, duration: 0.5 }}
+                  className="flex flex-col md:items-center justify-center mt-5"
+                >
                   <div className="flex items-center mt-2">
-                    <span class="material-symbols-outlined text-sm md:text-lg mr-2 text-gray-400">
+                    <span className="material-symbols-outlined text-sm md:text-lg mr-2 text-gray-400">
                       call
                     </span>
-                    <p className="text-sm text-gray-400 items-">
-                      {testimonial.contact}
-                    </p>
+                    <p className="text-sm text-gray-400">{testimonial.contact}</p>
                   </div>
                   <div className="flex items-center">
                     <p className="text-sm text-gray-400">
@@ -115,8 +146,8 @@ export default function Testimonials() {
                       </a>
                     </p>
                   </div>
-                </div>
-              </div>
+                </motion.div>
+              </motion.div>
             ))}
           </Slider>
         </div>
