@@ -22,7 +22,7 @@ const testimonialsData = [
 
 const PrevArrow = ({ onClick }) => (
     <span
-      className="material-symbols-outlined absolute md:flex justify-center items-center top-1/2 -translate-y-1/2 text-slate-500 text-3xl md:text-5xl rounded-full p-2 cursor-pointer transition-all duration-300 ease-in-out z-20 left-2 md:-left-5"
+      className="hidden material-symbols-outlined absolute md:flex justify-center items-center top-1/2 -translate-y-1/2 text-slate-500 text-3xl md:text-5xl rounded-full p-2 cursor-pointer transition-all duration-300 ease-in-out z-20 md:-left-5"
       onClick={(e) => {
         e.stopPropagation();
         onClick();
@@ -34,7 +34,7 @@ const PrevArrow = ({ onClick }) => (
 
   const NextArrow = ({ onClick }) => (
     <span
-      className="material-symbols-outlined absolute w-8 h-8 md:flex justify-center items-center top-1/2 -translate-y-1/2 text-slate-500 text-3xl md:text-5xl rounded-full p-2 cursor-pointer transition-all duration-300 ease-in-out z-20 right-10 md:-right-5"
+      className="hidden material-symbols-outlined absolute w-8 h-8 md:flex justify-center items-center top-1/2 -translate-y-1/2 text-slate-500 text-3xl md:text-5xl rounded-full p-2 cursor-pointer transition-all duration-300 ease-in-out z-20 md:-right-5"
       onClick={(e) => {
         e.stopPropagation();
         onClick();
@@ -52,7 +52,7 @@ export default function Testimonials() {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 4000,
+    autoplaySpeed: 2000,
     prevArrow: <PrevArrow />,
     nextArrow: <NextArrow />,
   };
