@@ -1,6 +1,6 @@
 import React from "react";
 import Slider from "react-slick";
-import { motion } from "framer-motion"; // Importing framer-motion
+import { motion } from "framer-motion";
 
 const testimonialsData = [
   {
@@ -64,78 +64,54 @@ export default function Testimonials() {
 
   return (
     <section className="bg-black text-white py-20 px-8 md:px-40">
-      <div className="flex flex-col w-full justify-center items-center mb-12 text-center">
+      <motion.div
+        className="flex flex-col w-full justify-center items-center mb-12 text-center"
+        initial={{ y: -50, opacity: 0 }}
+        whileInView={{ x: 0, y: 0, opacity: 1 }}
+        transition={{ duration: 0.5, ease: "easeInOut" }}
+        viewport={{ once: false, amount: 0.2 }}
+      >
         <p className="text-gray-400 md:text-lg mb-1 md:mb-3">What People Say</p>
         <p className="text-white text-4xl md:text-5xl font-bold">
           Testimonials
         </p>
-      </div>
+      </motion.div>
       <div className="flex justify-center">
         <div className="w-full md:w-2/3 lg:w-1/2">
           <Slider {...sliderSettings} className="flex items-center text-center">
             {testimonialsData.map((testimonial, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{once: false}}
                 className="p-4 md:p-8 !w-11/12 min-h-60 flex flex-col items-center justify-center text-center rounded-lg shadow-neon neon-border transition-all duration-300 border border-gray-500"
               >
-                <motion.p
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  viewport={{once: false}}
-                  transition={{ delay: 0.2, duration: 0.5 }}
-                  className="text-lg md:text-xl italic mb-6 text-gray-300"
-                >
+                <p className="text-lg md:text-xl italic mb-6 text-gray-300">
                   "{testimonial.quote}"
-                </motion.p>
+                </p>
                 <div className="flex items-center justify-center">
-                  <motion.img
-                    initial={{ scale: 0.8 }}
-                    animate={{ scale: 1 }}
-                    transition={{ delay: 0.3, duration: 0.5 }}
+                  <img
                     src={testimonial.image}
-                    viewport={{once: false}}
                     alt={testimonial.name}
                     className="w-10 md:w-20 h-10 md:h-20 rounded-full object-cover mr-4 md:mr-8"
                   />
                   <div className="text-left">
-                    <motion.p
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      viewport={{once: false}}
-                      transition={{ delay: 0.4, duration: 0.5 }}
-                      className="md:text-xl font-semibold text-white"
-                    >
+                    <p className="md:text-xl font-semibold text-white">
                       {testimonial.name}
-                    </motion.p>
-                    <motion.p
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      viewport={{once: false}}
-                      transition={{ delay: 0.5, duration: 0.5 }}
-                      className="text-sm md:text-lg text-gray-400"
-                    >
+                    </p>
+                    <p className="text-sm md:text-lg text-gray-400">
                       {testimonial.position}
-                    </motion.p>
+                    </p>
                   </div>
                 </div>
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  viewport={{once: false}}
-                  transition={{ delay: 0.6, duration: 0.5 }}
-                  className="flex flex-col md:items-center justify-center mt-5"
-                >
-                  <div className="flex items-center mt-2">
-                    <span className="material-symbols-outlined text-sm md:text-lg mr-2 text-gray-400">
+                <div className="flex flex-col md:items-center justify-center mt-5">
+                  <div className="flex items-center mt-2 flex-nowrap">
+                    <span class="material-symbols-outlined text-sm md:text-lg mr-2 text-gray-400">
                       call
                     </span>
-                    <p className="text-sm text-gray-400">{testimonial.contact}</p>
+                    <p className="text-sm text-gray-400 items-">
+                      {testimonial.contact}
+                    </p>
                   </div>
-                  <div className="flex items-center">
+                  <div className="flex items-center flex-nowrap">
                     <p className="text-sm text-gray-400">
                       <i className="far fa-envelope text-sm md:text-lg mr-2"></i>
                       <a
@@ -146,8 +122,8 @@ export default function Testimonials() {
                       </a>
                     </p>
                   </div>
-                </motion.div>
-              </motion.div>
+                </div>
+              </div>
             ))}
           </Slider>
         </div>
