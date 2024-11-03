@@ -95,7 +95,7 @@ export default function Testimonials() {
                     </p>
                   </div>
                 </div>
-                <div className="flex flex-col items-left justify-center mt-5 ml-5">
+                <div className="flex flex-col justify-center mt-5">
                   <div className="flex items-center mt-2">
                     <span class="material-symbols-outlined text-sm md:text-lg mr-2 text-gray-400">
                       call
