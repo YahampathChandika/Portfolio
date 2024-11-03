@@ -39,7 +39,7 @@ export default function Skills() {
       <div className="container mx-auto px-6">
         <div className="flex flex-col w-full justify-center items-start mb-10">
           <p className="text-gray-400 md:text-lg mb-1">My Abilities</p>
-          <p className="text-white text-5xl md:text-6xl font-bold">Skills.</p>
+          <p className="text-white text-4xl md:text-5xl font-bold">Skills.</p>
         </div>
 
         {/* Row One */}
