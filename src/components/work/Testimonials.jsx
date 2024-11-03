@@ -93,25 +93,27 @@ export default function Testimonials() {
                     <p className="text-sm md:text-lg text-gray-400">
                       {testimonial.position}
                     </p>
-                    <div className="flex items-center mt-2">
-                      <span class="material-symbols-outlined text-sm md:text-lg mr-2 text-gray-400">
-                        call
-                      </span>
-                      <p className="text-sm text-gray-400 items-">
-                        {testimonial.contact}
-                      </p>
-                    </div>
-                    <div className="flex items-center">
-                      <p className="text-sm text-gray-400">
-                        <i className="far fa-envelope text-sm md:text-lg mr-2"></i>
-                        <a
-                          href={`mailto:${testimonial.email}`}
-                          className="hover:text-gray-300"
-                        >
-                          {testimonial.email}
-                        </a>
-                      </p>
-                    </div>
+                  </div>
+                </div>
+                <div className="flex flex-col items-left justify-center mt-5 ml-5">
+                  <div className="flex items-center mt-2">
+                    <span class="material-symbols-outlined text-sm md:text-lg mr-2 text-gray-400">
+                      call
+                    </span>
+                    <p className="text-sm text-gray-400 items-">
+                      {testimonial.contact}
+                    </p>
+                  </div>
+                  <div className="flex items-center">
+                    <p className="text-sm text-gray-400">
+                      <i className="far fa-envelope text-sm md:text-lg mr-2"></i>
+                      <a
+                        href={`mailto:${testimonial.email}`}
+                        className="hover:text-gray-300"
+                      >
+                        {testimonial.email}
+                      </a>
+                    </p>
                   </div>
                 </div>
               </div>
