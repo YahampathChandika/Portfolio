@@ -54,7 +54,7 @@ export default function AboutMe() {
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
             <span className="relative inline-flex rounded-full h-3 w-3 bg-white"></span>
           </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white tracking-wider">
+          <h2 className="text-4xl md:text-5xl font-bold text-white tracking-wider">
             About Me
           </h2>
         </div>

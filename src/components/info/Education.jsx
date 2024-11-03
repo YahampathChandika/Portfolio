@@ -35,8 +35,8 @@ export default function Education() {
     <section className="bg-black text-white py-20">
       <div className="container mx-auto px-6">
         <div className="flex flex-col w-full justify-center items-center mb-20">
-          <p className="text-gray-400 text-lg mb-3">My Journey</p>
-          <p className="text-white text-5xl font-bold">Education.</p>
+          <p className="text-gray-400 text-lg mb-1">My Journey</p>
+          <p className="text-white text-4xl md:text-5xl font-bold">Education.</p>
         </div>
 
         <VerticalTimeline>
