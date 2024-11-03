@@ -22,7 +22,7 @@ const testimonialsData = [
 
 const PrevArrow = ({ onClick }) => (
     <span
-      className="material-symbols-outlined absolute w-8 h-8 md:flex justify-center items-center top-1/2 -translate-y-1/2 text-slate-500 text-5xl rounded-full p-2 cursor-pointer transition-all duration-300 ease-in-out z-20 left-2 md:-left-5"
+      className="material-symbols-outlined absolute md:flex justify-center items-center top-1/2 -translate-y-1/2 text-slate-500 text-3xl md:text-5xl rounded-full p-2 cursor-pointer transition-all duration-300 ease-in-out z-20 left-2 md:-left-5"
       onClick={(e) => {
         e.stopPropagation();
         onClick();
@@ -34,7 +34,7 @@ const PrevArrow = ({ onClick }) => (
 
   const NextArrow = ({ onClick }) => (
     <span
-      className="material-symbols-outlined absolute w-8 h-8 md:flex justify-center items-center top-1/2 -translate-y-1/2 text-slate-500 text-5xl rounded-full p-2 cursor-pointer transition-all duration-300 ease-in-out z-20 right-10 md:-right-5"
+      className="material-symbols-outlined absolute w-8 h-8 md:flex justify-center items-center top-1/2 -translate-y-1/2 text-slate-500 text-3xl md:text-5xl rounded-full p-2 cursor-pointer transition-all duration-300 ease-in-out z-20 right-10 md:-right-5"
       onClick={(e) => {
         e.stopPropagation();
         onClick();
@@ -74,7 +74,7 @@ export default function Testimonials() {
             {testimonialsData.map((testimonial, index) => (
               <div
                 key={index}
-                className="p-8 !w-11/12 h-60 flex flex-col items-center justify-center text-center rounded-lg shadow-neon neon-border transition-all duration-300 border border-gray-500"
+                className="p-4 md:p-8 !w-11/12 min-h-60 flex flex-col items-center justify-center text-center rounded-lg shadow-neon neon-border transition-all duration-300 border border-gray-500"
               >
                 <p className="text-lg md:text-xl italic mb-6 text-gray-300">
                   "{testimonial.quote}"
@@ -83,7 +83,7 @@ export default function Testimonials() {
                   <img
                     src={testimonial.image}
                     alt={testimonial.name}
-                    className="w-20 h-20 rounded-full object-cover mr-5"
+                    className="w-10 md:w-20 h-10 md:h-20 rounded-full object-cover mr-5"
                   />
                   <div className="text-left">
                     <p className="md:text-xl font-semibold text-white">
