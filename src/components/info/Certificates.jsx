@@ -73,8 +73,8 @@ export default function Certificates() {
   return (
     <section className="bg-black text-white py-20 px-6 md:px-40">
       <div className="container mx-auto flex flex-col items-start mb-12">
-        <p className="text-gray-400 text-lg mb-3">My Achievements</p>
-        <h2 className="text-white text-5xl font-bold">Certificates</h2>
+        <p className="text-gray-400 md:text-lg mb-3">My Achievements</p>
+        <h2 className="text-white text-3xl md:text-5xl font-bold">Certificates.</h2>
       </div>
 
       <motion.div
@@ -108,7 +108,7 @@ export default function Certificates() {
             <img
               src={cert.image}
               alt={cert.title}
-              className="w-full h-60 object-cover rounded-md mb-4"
+              className="w-full h-48 md:h-60 object-cover rounded-md mb-4"
             />
             <div className="flex flex-col items-start text-left">
               <h3 className="text-xl font-semibold mb-2 text-white">
