@@ -49,9 +49,13 @@ export default function Footer() {
         <div className="md:flex items-center space-y-8 md:space-y-0 md:space-x-6 justify-between w-10/12 md:w-1/3">
           {/* Email Card */}
           <div
-            className="w-full md:w-1/2 bg-white p-8 md:p-6 rounded-xl flex items-center justify-center text-center cursor-pointer transition-all duration-300 hover:scale-105 neon-hover neon-border shadow-neon"
+            className="w-full md:w-1/2 bg-white p-8 md:p-6 rounded-xl flex items-center justify-center text-center cursor-pointer transition-all duration-300 hover:scale-105 neon-hover neon-border shadow-neon relative"
             onClick={() => window.open("mailto:yhmpth@gmail.com", "_self")}
           >
+            <span className="absolute top-3 left-3 flex h-3 w-3">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-500 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+            </span>
             <div className="flex flex-col text-black">
               <i className="far fa-envelope text-3xl md:text-4xl"></i>
               <p className="text-sm md:text-lg mt-4 font-semibold">
@@ -59,11 +63,19 @@ export default function Footer() {
               </p>
             </div>
           </div>
+
           {/* Phone Card */}
           <div
-            className="w-full md:w-1/2 bg-white p-8 md:p-6 rounded-xl flex items-center justify-center text-center cursor-pointer transition-all duration-300 hover:scale-105 neon-hover neon-border shadow-neon"
+            className="w-full md:w-1/2 bg-white p-8 md:p-6 rounded-xl flex items-center justify-center text-center cursor-pointer transition-all duration-300 hover:scale-105 neon-hover neon-border shadow-neon relative"
             onClick={() => window.open("tel:+94779817119", "_self")}
           >
+            {/* Ping indicator positioned at the top left */}
+            <span className="absolute top-3 left-3 flex h-3 w-3">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-500 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+            </span>
+
+            {/* Card content */}
             <div className="flex flex-col text-black">
               <i className="fas fa-phone text-3xl md:text-4xl"></i>
               <p className="text-sm md:text-lg mt-4 font-semibold">
