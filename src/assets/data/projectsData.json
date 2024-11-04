@@ -26,11 +26,14 @@
 
   {
     "title": "Medical Laboratory Management System",
-    "description": "A web application to streamline lab operations and data management.",
+    "description": "A comprehensive web-based management system developed for Medisense Laboratory Pvt Ltd, designed to streamline and automate operations across all departments of the laboratory.",
     "features": [
-      "Responsive design for desktop and mobile",
-      "Admin dashboard for managing inventory",
-      "Integration with payment gateways"
+      "Cashier and reception management",
+      "Doctor and patient record management",
+      "Separate modules for mini lab, main lab, and x-ray processing",
+      "Test result management and reporting",
+      "Customer and agency management",
+      "User role-based access and permissions"
     ],
     "techStack": [
       "React",
@@ -52,8 +55,8 @@
       "medi5",
       "medi6"
     ],
-    "codeLink": "https://github.com/example/supercar-store",
-    "demoLink": "https://supercar-store.demo.com"
+    "codeLink": "https://github.com/YahampathChandika/Medisense_FE",
+    "demoLink": "https://medisense-fe.vercel.app/"
   },
 
   {
@@ -105,19 +108,19 @@
       "AWS"
     ],
     "images": [
-      "lux1",
-      "lux2",
-      "lux3",
-      "lux4",
-      "lux5",
-      "lux6",
-      "lux7",
-      "lux8",
-      "lux9",
-      "lux10",
-      "lux11",
+      "lux13",
       "lux12",
-      "lux13"
+      "lux11",
+      "lux10",
+      "lux9",
+      "lux8",
+      "lux7",
+      "lux6",
+      "lux5",
+      "lux4",
+      "lux3",
+      "lux2",
+      "lux1"
     ],
     "codeLink": "https://github.com/YahampathChandika/Car-Store-FE",
     "demoLink": "https://luxuryrides.vercel.app/"
