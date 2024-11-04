@@ -69,5 +69,57 @@
     "images": ["burg1", "burg2", "burg3", "burg4"],
     "codeLink": "https://github.com/YahampathChandika/Burgeon_Tours",
     "demoLink": "https://burgeon-tours.vercel.app/"
+  },
+
+  {
+    "title": "Vehicle Inspection System",
+    "description": "A web-based application used by \"Green Light\", a vehicle inspection company, to record detailed inspection results for each vehicle part, generating comprehensive reports on the vehicle's overall condition.",
+    "features": [
+      "Detailed part-by-part inspection recording",
+      "Automated report generation on overall vehicle condition",
+      "Searchable inspection history for past records",
+      "User-friendly interface for inspectors"
+    ],
+    "techStack": ["React", "CSS", "Bootstrap", "Rsuite"],
+    "images": ["green1", "green5", "green4", "green3", "green2"],
+    "codeLink": "https://github.com/YahampathChandika/GreenLight",
+    "demoLink": "https://green-light-neon.vercel.app/"
+  },
+
+  {
+    "title": "Supercar Store Platform",
+    "description": "\"Luxury Rides\", A comprehensive web-based platform for a supercar store, including a client-facing website for browsing available cars and a management system for store operations.",
+    "features": [
+      "Client website to view available supercars and specifications",
+      "Email-based inquiry system for clients",
+      "Store management system for CRUD operations on car listings",
+      "Real-time updates between client website and management system",
+      "Inquiry response functionality for store owners"
+    ],
+    "techStack": [
+      "React",
+      "Node.js",
+      "Express.js",
+      "Sequelize",
+      "MySQL",
+      "AWS"
+    ],
+    "images": [
+      "lux1",
+      "lux2",
+      "lux3",
+      "lux4",
+      "lux5",
+      "lux6",
+      "lux7",
+      "lux8",
+      "lux9",
+      "lux10",
+      "lux11",
+      "lux12",
+      "lux13"
+    ],
+    "codeLink": "https://github.com/YahampathChandika/Car-Store-FE",
+    "demoLink": "https://luxuryrides.vercel.app/"
   }
 ]

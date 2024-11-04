@@ -5,6 +5,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import projectsData from "../../assets/data/projectsData.json";
 import { Box, Modal, Fade, Backdrop } from "@mui/material";
+
 import admitted from "../../assets/images/admitted.png";
 import chartview from "../../assets/images/chartview.png";
 import overview from "../../assets/images/overview.png";
@@ -14,6 +15,7 @@ import reg2 from "../../assets/images/reg2.png";
 import tableview from "../../assets/images/tableview.png";
 import userReg from "../../assets/images/userReg.png";
 import users from "../../assets/images/users.png";
+
 import medi1 from "../../assets/images/medisense (1).png";
 import medi2 from "../../assets/images/medisense (2).png";
 import medi3 from "../../assets/images/medisense (3).png";
@@ -22,10 +24,31 @@ import medi5 from "../../assets/images/medisense (5).png";
 import medi6 from "../../assets/images/medisense (6).png";
 import medi7 from "../../assets/images/medisense (7).png";
 import medi8 from "../../assets/images/medisense (8).png";
+
 import burg1 from "../../assets/images/burg (1).png";
 import burg2 from "../../assets/images/burg (2).png";
 import burg3 from "../../assets/images/burg (3).png";
 import burg4 from "../../assets/images/burg (4).png";
+
+import green1 from "../../assets/images/green (1).png";
+import green2 from "../../assets/images/green (2).png";
+import green3 from "../../assets/images/green (3).png";
+import green4 from "../../assets/images/green (4).png";
+import green5 from "../../assets/images/green (5).png";
+
+import lux1 from "../../assets/images/lux (1).png";
+import lux2 from "../../assets/images/lux (2).png";
+import lux3 from "../../assets/images/lux (3).png";
+import lux4 from "../../assets/images/lux (4).png";
+import lux5 from "../../assets/images/lux (5).png";
+import lux6 from "../../assets/images/lux (6).png";
+import lux7 from "../../assets/images/lux (7).png";
+import lux8 from "../../assets/images/lux (8).png";
+import lux9 from "../../assets/images/lux (9).png";
+import lux10 from "../../assets/images/lux (10).png";
+import lux11 from "../../assets/images/lux (11).png";
+import lux12 from "../../assets/images/lux (12).png";
+import lux13 from "../../assets/images/lux (13).png";
 
 export default function Projects() {
   const [projects, setProjects] = useState([]);
@@ -57,6 +80,26 @@ export default function Projects() {
     burg2,
     burg3,
     burg4,
+
+    green1,
+    green2,
+    green3,
+    green4,
+    green5,
+    
+    lux1,
+    lux2,
+    lux3,
+    lux4,
+    lux5,
+    lux6,
+    lux7,
+    lux8,
+    lux9,
+    lux10,
+    lux11,
+    lux12,
+    lux13,
   };
 
   useEffect(() => {
