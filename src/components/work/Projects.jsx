@@ -14,11 +14,18 @@ import reg2 from "../../assets/images/reg2.png";
 import tableview from "../../assets/images/tableview.png";
 import userReg from "../../assets/images/userReg.png";
 import users from "../../assets/images/users.png";
-import medi1 from "../../assets/images/medi1.png";
-import medi2 from "../../assets/images/medi2.png";
-import medi3 from "../../assets/images/medi3.png";
-import medi4 from "../../assets/images/medi4.png";
-import medi5 from "../../assets/images/medi5.png";
+import medi1 from "../../assets/images/medisense (1).png";
+import medi2 from "../../assets/images/medisense (2).png";
+import medi3 from "../../assets/images/medisense (3).png";
+import medi4 from "../../assets/images/medisense (4).png";
+import medi5 from "../../assets/images/medisense (5).png";
+import medi6 from "../../assets/images/medisense (6).png";
+import medi7 from "../../assets/images/medisense (7).png";
+import medi8 from "../../assets/images/medisense (8).png";
+import burg1 from "../../assets/images/burg (1).png";
+import burg2 from "../../assets/images/burg (2).png";
+import burg3 from "../../assets/images/burg (3).png";
+import burg4 from "../../assets/images/burg (4).png";
 
 export default function Projects() {
   const [projects, setProjects] = useState([]);
@@ -36,11 +43,20 @@ export default function Projects() {
     tableview,
     userReg,
     users,
+
     medi1,
     medi2,
     medi3,
     medi4,
     medi5,
+    medi6,
+    medi7,
+    medi8,
+
+    burg1,
+    burg2,
+    burg3,
+    burg4,
   };
 
   useEffect(() => {
@@ -145,7 +161,7 @@ export default function Projects() {
           }
           whileInView={{ x: 0, y: 0, opacity: 1 }}
           transition={{ duration: 0.8, ease: "easeInOut" }}
-          viewport={{ once: false, amount: isMobile ? 0.2 : 0.5 }}
+          viewport={{ once: true, amount: isMobile ? 0.2 : 0.5 }}
         >
           <div className="flex justify-between items-center mb-8">
             <p className="font-semibold text-2xl md:text-3xl">

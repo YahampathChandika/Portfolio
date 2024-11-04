@@ -32,33 +32,42 @@
       "Admin dashboard for managing inventory",
       "Integration with payment gateways"
     ],
-    "techStack": ["React", "Redux", "Node.js", "Sequelize ORM", "Express", "MySQL", "AWS", "Tailwind CSS"],
-    "images": ["medi1", "medi2", "medi3", "medi4", "medi5"],
+    "techStack": [
+      "React",
+      "Redux",
+      "Node.js",
+      "Sequelize ORM",
+      "Express",
+      "MySQL",
+      "AWS",
+      "Tailwind CSS"
+    ],
+    "images": [
+      "medi8",
+      "medi7",
+      "medi3",
+      "medi2",
+      "medi1",
+      "medi4",
+      "medi5",
+      "medi6"
+    ],
     "codeLink": "https://github.com/example/supercar-store",
     "demoLink": "https://supercar-store.demo.com"
   },
 
   {
-    "title": "Portfolio Website",
-    "description": "A personal portfolio website to showcase my projects and experience.",
+    "title": "Vehicle Renting Website",
+    "description": "\"Burgeon Tours\", A responsive website for booking vehicles for trips, with automatic cost estimates based on start and end locations using Google Maps APIs.",
     "features": [
-      "Projects and experience section",
-      "Contact form integration",
-      "Modern and responsive design"
+      "Vehicle booking for trips and journeys",
+      "Cost estimation based on location inputs",
+      "Inquiries and messaging about rides",
+      "Fully mobile-responsive design"
     ],
-    "techStack": ["React", "Tailwind CSS", "Vercel"],
-    "images": [
-      "admitted",
-      "chartview",
-      "overview",
-      "patients",
-      "reg1",
-      "reg2",
-      "tableview",
-      "userReg",
-      "users"
-    ],
-    "codeLink": "https://github.com/example/portfolio",
-    "demoLink": "https://portfolio.demo.com"
+    "techStack": ["React", "Node", "MySQL", "Google Maps API", "CSS"],
+    "images": ["burg1", "burg2", "burg3", "burg4"],
+    "codeLink": "https://github.com/YahampathChandika/Burgeon_Tours",
+    "demoLink": "https://burgeon-tours.vercel.app/"
   }
 ]
