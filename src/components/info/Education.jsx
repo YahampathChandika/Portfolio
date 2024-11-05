@@ -13,7 +13,7 @@ export default function Education() {
       degree: "B.Sc. Engineering Honours in Computer Systems Engineering",
       year: "2024",
       logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzMusNEftMbTRViAvsf9E2hevtoFoTcYmxHA&s",
-      grade: "GPA: 2.0",
+      grade: "GPA: --",
     },
     {
       institution: "Richmond College",

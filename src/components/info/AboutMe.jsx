@@ -35,7 +35,7 @@
 // }
 
 import React from "react";
-import aboutImg from "../../assets/images/about.jpg";
+import aboutImg from "../../assets/images/me3.jpg";
 
 export default function AboutMe() {
   return (
@@ -43,6 +43,9 @@ export default function AboutMe() {
       className="relative flex items-center justify-center md:justify-end min-h-screen bg-fixed bg-cover bg-center -mt-32 p-6 md:p-10"
       style={{
         backgroundImage: `url(${aboutImg})`,
+        backgroundColor: "rgba(0, 0, 0, 0.1)",
+        backgroundBlendMode: "overlay",
+        backgroundPosition: "50% 10%",        
       }}
     >
       {/* <div className="absolute inset-0 bg-black opacity-70"></div> */}

@@ -1,5 +1,6 @@
 import React from "react";
-import heroImg from "../../assets/images/hero.jpg";
+// import heroImg from "../../assets/images/hero.jpg";
+import heroImg from "../../assets/images/me2b.png";
 
 export default function HeroSection() {
   return (
@@ -9,10 +10,10 @@ export default function HeroSection() {
         backgroundImage: `url(${heroImg})`,
         backgroundColor: "rgba(0, 0, 0, 0.1)",
         backgroundBlendMode: "overlay",
-        backgroundPosition: "70% 50%",
+        backgroundPosition: "70% 50%",        
       }}
     >
-      <div className="absolute inset-0 bg-gradient-to-b from-black/10 to-black/70" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/20 to-black/70" />
       <div className="relative text-left w-10/12  p-5 md:p-10 mx-auto z-10">
         <h1 className="text-white text-3xl md:text-7xl font-bold leading-tight mb-4  animate-pulse">
           Hi, I’m Yahampath

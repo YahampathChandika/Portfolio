@@ -79,7 +79,7 @@ export default function Navbar() {
 
           <button
             className={`relative z-10 py-2 text-sm w-1/2 font-medium glow-text neon-hover rounded-full transition-colors duration-300 hover:text-white ${
-              activeTab === "work" ? "text-white" : "text-gray-400"
+              activeTab === "work" ? "text-white" : "text-gray-300"
             }`}
             onClick={() => {
               setActiveTab("work");
@@ -91,7 +91,7 @@ export default function Navbar() {
 
           <button
             className={`relative z-10 px-4 py-2 text-sm w-1/2 font-medium glow-text neon-hover rounded-full transition-colors duration-300 hover:text-white ${
-              activeTab === "info" ? "text-white" : "text-gray-400"
+              activeTab === "info" ? "text-white" : "text-gray-300"
             }`}
             onClick={() => {
               setActiveTab("info");

@@ -1,31 +1,31 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Box, Modal, Fade, Backdrop } from "@mui/material";
-import admitted from "../../assets/images/admitted.png";
-import chartview from "../../assets/images/chartview.png";
-import overview from "../../assets/images/overview.png";
+import aws from "../../assets/images/aws.png";
+import ml from "../../assets/images/ml.png";
+import dl from "../../assets/images/dl.png";
 
 const certificates = [
   {
-    title: "Certified React Developer",
-    issuer: "Coursera",
-    year: "2023",
-    image: admitted,
+    title: "AWS Academy Cloud Foundations",
+    issuer: "AWS Academy Graduate",
+    year: "2024",
+    image: aws,
     link: "https://www.credly.com/badges/eef34be6-b727-4aab-a8b7-4c62d70dbbdc/public_url",
   },
   {
-    title: "AWS Certified Solutions Architect",
-    issuer: "Amazon",
-    year: "2022",
-    image: chartview,
-    link: "https://amazon.com/certificate/aws-solutions",
+    title: "Machine Learning Onramp",
+    issuer: "MatLab Academy",
+    year: "2024",
+    image: ml,
+    link: "https://matlabacademy.mathworks.com/progress/share/certificate.html?id=bf440033-1b89-49d9-9fcf-a7ce2c3447f1&",
   },
   {
     title: "Full Stack Web Developer",
-    issuer: "Udacity",
-    year: "2021",
-    image: overview,
-    link: "https://udacity.com/certificate/full-stack",
+    issuer: "MatLab Academy",
+    year: "2024",
+    image: dl,
+    link: "https://matlabacademy.mathworks.com/progress/share/certificate.html?id=261e4bb5-bca0-4c2d-90b1-e52e9da0d351&",
   },
   // Add more certificates as needed
 ];
@@ -49,7 +49,7 @@ export default function Certificates() {
     top: "50%",
     left: "50%",
     transform: "translate(-50%, -50%)",
-    width: "60%",
+    width: "50%",
     maxHeight: "95vh", // Prevent overflow on small screens
     overflowY: "auto", // Enable scrolling if content overflows
     bgcolor: "background.paper",
