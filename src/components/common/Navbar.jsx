@@ -117,7 +117,12 @@ export default function Navbar() {
             call_made
           </span>
         </a>
-        <a href="#" className="flex items-center neon-hover">
+        <a
+          href="https://drive.google.com/file/d/1Xc_jCwd075Uz2obHd84ZNtyIrXJCVNPs/view?usp=drive_link"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center neon-hover"
+        >
           Resume
           <span className="material-symbols-outlined text-xl ml-1">
             call_made
@@ -172,7 +177,12 @@ export default function Navbar() {
                 call_made
               </span>
             </a>
-            <a href="#" className="neon-hover">
+            <a
+              href="https://drive.google.com/file/d/1Xc_jCwd075Uz2obHd84ZNtyIrXJCVNPs/view?usp=drive_link"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="neon-hover"
+            >
               Resume
               <span className="material-symbols-outlined text-xl ml-2">
                 call_made

@@ -196,7 +196,7 @@ export default function Projects() {
       {projects.map((project, index) => (
         <motion.div
           key={index}
-          className="w-full py-10 px-6 md:px-12 text-white rounded-2xl shadow-neon neon-border mb-12"
+          className="w-full py-10 px-6 md:px-12 text-white rounded-2xl shadow-neon neon-border mb-12 md:mb-32"
           initial={
             isMobile
               ? { y: 50, opacity: 0 } // Same animation for mobile
@@ -206,8 +206,8 @@ export default function Projects() {
           transition={{ duration: 0.8, ease: "easeInOut" }}
           viewport={{ once: true, amount: isMobile ? 0.2 : 0.5 }}
         >
-          <div className="flex justify-between items-center mb-8">
-            <p className="font-semibold text-2xl md:text-3xl">
+          <div className="flex justify-between items-center mb-8 md:mb-12">
+            <p className="font-semibold text-2xl md:text-4xl">
               {project.title}
             </p>
           </div>
