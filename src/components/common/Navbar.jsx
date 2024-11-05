@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
-
+import logo from "../../assets/images/logo.jpg";
 export default function Navbar() {
   const location = useLocation();
   const initialTab = location.pathname === "/info" ? "info" : "work";
@@ -59,7 +59,8 @@ export default function Navbar() {
       >
         <img
           className="h-auto w-20 md:mr-5 neon-border rounded-full p-2"
-          src="https://cdn.vectorstock.com/i/500p/80/27/yc-logo-monogram-design-template-vector-38558027.jpg"
+          // src="https://cdn.vectorstock.com/i/500p/80/27/yc-logo-monogram-design-template-vector-38558027.jpg"
+          src={logo}
           alt="logo"
         />
         <div className="hidden md:flex flex-col">
