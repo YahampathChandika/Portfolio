@@ -4,20 +4,21 @@ import { motion } from "framer-motion";
 
 const testimonialsData = [
   {
-    name: "John Doe",
-    position: "CEO at XYZ Corp",
+    name: "Mr. R. A. Prabhath Buddhika",
+    position:
+      "Senior Lecturer / HoD \nDepartment of Electrical, Electronic and Systems Engineering, \nFaculty of Engineering,\nNSBM Green University,\nHomagama,\nSri Lanka.",
     image:
-      "https://i.pinimg.com/originals/07/33/ba/0733ba760b29378474dea0fdbcb97107.png",
-    contact: "123-456-7890",
-    email: "john.doe@example.com",
+      "https://i1.rgstatic.net/ii/profile.image/11431281209793948-1701837952770_Q512/Prabhath-Buddhika-2.jpg",
+    contact: "+94 71 603 7498",
+    email: "prabhath.b@nsbm.ac.lk",
   },
   {
-    name: "Jane Smith",
-    position: "Product Manager at ABC Inc.",
+    name: "Mr. Sahan Hettige",
+    position: "ICT Project Manager,\nAmerck Inc.\nStratfordAve,\nColombo.",
     image:
-      "https://easy-peasy.ai/cdn-cgi/image/quality=80,format=auto,width=700/https://fdczvxmwwjwpwbeeqcth.supabase.co/storage/v1/object/public/images/50dab922-5d48-4c6b-8725-7fd0755d9334/3a3f2d35-8167-4708-9ef0-bdaa980989f9.png",
-    contact: "987-654-3210",
-    email: "jane.sth@example.com",
+      "https://media.licdn.com/dms/image/v2/D5603AQEiTwOltipczg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1708172411682?e=1736380800&v=beta&t=vfPiTDe8J6ka4AvHy513ua4P4NqaXyG3_PfmeIXkTY8",
+    contact: "+94 71 258 5352",
+    email: "sahanhettige18@gmail.com",
   },
 ];
 
@@ -78,38 +79,41 @@ export default function Testimonials() {
                 key={index}
                 className="p-4 md:p-8 !w-11/12 min-h-60 flex flex-col items-center justify-center text-center rounded-lg shadow-neon neon-border transition-all duration-300 border border-gray-500"
               >
-                <div className="flex items-center justify-center">
-                  <img
-                    src={testimonial.image}
-                    alt={testimonial.name}
-                    className="w-10 md:w-20 h-10 md:h-20 rounded-full object-cover mr-4 md:mr-8"
-                  />
+                <div className="flex justify-between">
                   <div className="text-left">
-                    <p className="text-xl md:text-3xl font-semibold text-white">
+                    <p className="text-lg md:text-3xl font-semibold text-white mb-5">
                       {testimonial.name}
                     </p>
-                    <p className="text-sm md:text-lg text-gray-400">
+                    <p
+                      style={{ whiteSpace: "pre-line" }}
+                      className="text-sm md:text-lg text-gray-400"
+                    >
                       {testimonial.position}
                     </p>
                   </div>
+                  <img
+                    src={testimonial.image}
+                    alt={testimonial.name}
+                    className="w-10 md:w-20 h-10 md:h-20 rounded-full object-cover ml-2"
+                  />
                 </div>
-                <div className="flex flex-col md:items-center mt-5">
+                <div className="flex flex-col md:items-end mt-5">
                   <div className="flex items-center mt-2">
-                    <span class="material-symbols-outlined text-sm md:text-lg mr-3 text-gray-400">
+                    <p className="text-sm md:text-base text-gray-300">{testimonial.contact}</p>
+                    <span class="material-symbols-outlined text-sm md:text-lg ml-3 text-gray-300">
                       call
                     </span>
-                    <p className="text-gray-400">{testimonial.contact}</p>
                   </div>
-                  <div className="flex items-start">
-                    <i className="far fa-envelope text-sm md:text-lg mr-3 text-gray-400"></i>
-                    <p className="text-gray-400 break-all text-left">
+                  <div className="flex items-start mt-1 cursor-pointer">
+                    <p className="text-sm md:text-base text-gray-300 break-all text-left">
                       <a
                         href={`mailto:${testimonial.email}`}
-                        className="hover:text-gray-300"
+                        className="hover:text-gray-100"
                       >
                         {testimonial.email}
                       </a>
                     </p>
+                    <i className="far fa-envelope text-sm md:text-lg ml-3 text-gray-300"></i>
                   </div>
                 </div>
               </div>
