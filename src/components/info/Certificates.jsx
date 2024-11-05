@@ -21,7 +21,7 @@ const certificates = [
     link: "https://matlabacademy.mathworks.com/progress/share/certificate.html?id=bf440033-1b89-49d9-9fcf-a7ce2c3447f1&",
   },
   {
-    title: "Full Stack Web Developer",
+    title: "Deep Learning Onramp",
     issuer: "MatLab Academy",
     year: "2024",
     image: dl,

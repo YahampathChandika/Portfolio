@@ -49,7 +49,7 @@ export default function AboutMe() {
       }}
     >
       {/* <div className="absolute inset-0 bg-black opacity-70"></div> */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/80 to-black/60"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-black/70"></div>
 
       <div className="relative z-10 w-full max-w-lg text-center md:text-right px-4 md:px-6 lg:pr-16">
         <div className="flex items-center justify-center md:justify-end gap-2 mb-4 md:mb-6">
