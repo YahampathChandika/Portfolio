@@ -8,8 +8,6 @@ const testimonialsData = [
     position: "CEO at XYZ Corp",
     image:
       "https://i.pinimg.com/originals/07/33/ba/0733ba760b29378474dea0fdbcb97107.png",
-    quote:
-      "A very talented developer with a strong sense of design and quality.",
     contact: "123-456-7890",
     email: "john.doe@example.com",
   },
@@ -18,11 +16,9 @@ const testimonialsData = [
     position: "Product Manager at ABC Inc.",
     image:
       "https://easy-peasy.ai/cdn-cgi/image/quality=80,format=auto,width=700/https://fdczvxmwwjwpwbeeqcth.supabase.co/storage/v1/object/public/images/50dab922-5d48-4c6b-8725-7fd0755d9334/3a3f2d35-8167-4708-9ef0-bdaa980989f9.png",
-    quote: "Their work exceeded expectations and was delivered on time.",
     contact: "987-654-3210",
     email: "jane.sth@example.com",
   },
-  // Add more testimonials as needed
 ];
 
 const PrevArrow = ({ onClick }) => (
@@ -71,10 +67,8 @@ export default function Testimonials() {
         transition={{ duration: 0.5, ease: "easeInOut" }}
         viewport={{ once: false, amount: 0.2 }}
       >
-        <p className="text-gray-400 md:text-lg mb-1 md:mb-3">What People Say</p>
-        <p className="text-white text-4xl md:text-5xl font-bold">
-          Testimonials.
-        </p>
+        <p className="text-gray-400 md:text-lg mb-1 md:mb-3">References</p>
+        <p className="text-white text-4xl md:text-5xl font-bold">Referees.</p>
       </motion.div>
       <div className="flex justify-center">
         <div className="w-full md:w-2/3 lg:w-1/2">
@@ -84,9 +78,6 @@ export default function Testimonials() {
                 key={index}
                 className="p-4 md:p-8 !w-11/12 min-h-60 flex flex-col items-center justify-center text-center rounded-lg shadow-neon neon-border transition-all duration-300 border border-gray-500"
               >
-                <p className="text-lg md:text-xl italic mb-6 text-gray-300">
-                  "{testimonial.quote}"
-                </p>
                 <div className="flex items-center justify-center">
                   <img
                     src={testimonial.image}
@@ -94,7 +85,7 @@ export default function Testimonials() {
                     className="w-10 md:w-20 h-10 md:h-20 rounded-full object-cover mr-4 md:mr-8"
                   />
                   <div className="text-left">
-                    <p className="md:text-xl font-semibold text-white">
+                    <p className="text-xl md:text-3xl font-semibold text-white">
                       {testimonial.name}
                     </p>
                     <p className="text-sm md:text-lg text-gray-400">
@@ -104,16 +95,14 @@ export default function Testimonials() {
                 </div>
                 <div className="flex flex-col md:items-center mt-5">
                   <div className="flex items-center mt-2">
-                    <span class="material-symbols-outlined text-sm md:text-lg mr-2 text-gray-400">
+                    <span class="material-symbols-outlined text-sm md:text-lg mr-3 text-gray-400">
                       call
                     </span>
-                    <p className="text-sm text-gray-400 items-">
-                      {testimonial.contact}
-                    </p>
+                    <p className="text-gray-400">{testimonial.contact}</p>
                   </div>
                   <div className="flex items-start">
-                    <i className="far fa-envelope text-sm md:text-lg mr-2 text-gray-400"></i>
-                    <p className="text-sm text-gray-400 break-all text-left">
+                    <i className="far fa-envelope text-sm md:text-lg mr-3 text-gray-400"></i>
+                    <p className="text-gray-400 break-all text-left">
                       <a
                         href={`mailto:${testimonial.email}`}
                         className="hover:text-gray-300"
