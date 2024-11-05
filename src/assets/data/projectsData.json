@@ -1,14 +1,28 @@
 [
   {
-    "title": "AI-Enhanced Remote ICU Monitoring System",
-    "description": "\"Vital Care\", A web-based system for monitoring ICU patients using AI-enhanced reporting.",
+    "title": " AI-Enhanced Remote ICU Patient Monitoring System",
+    "description": "\"Vital Care\", A comprehensive ICU patient monitoring system designed for real-time tracking and alerting of critical patient conditions in ICU settings using the NEWS2 scoring system and rule-based alerts.",
     "features": [
-      "Real-time vital sign monitoring",
+      "Real-time vital sign monitoring alerting based on predefined thresholds",
+      "Automatic classification of patients into risk categories (Low, Medium, High) using NEWS2 scoring",
       "Role-based views for doctors and nurses",
-      "Automated alert generation",
-      "Note-keeping and patient discharge functionality"
+      "Automated customizable alert system for critical and borderline vital signs",
+      "Note-keeping and patient discharge functionality",
+      "Data visualization with chart and table views for vital sign trends",
+      "This was done for my final year research project and got selected for the TIDAC research symposium 2024 at NSBM"
     ],
-    "techStack": ["React", "Node.js", "MySQL", "AWS", "Tailwind CSS"],
+    "techStack": [
+      "React",
+      "Node.js",
+      "Express",
+      "Sequelize-ORM",
+      " RTK Query",
+      "Redux",
+      "Material UI",
+      "MySQL",
+      "AWS",
+      "Tailwind CSS"
+    ],
     "images": [
       "admitted",
       "chartview",
@@ -20,8 +34,8 @@
       "userReg",
       "users"
     ],
-    "codeLink": "https://github.com/example/icu-monitoring-system",
-    "demoLink": "https://icu-monitoring-system.demo.com"
+    "codeLink": "https://github.com/YahampathChandika/Final_Project_FE",
+    "demoLink": "https://www.vitalcare.website/"
   },
 
   {
