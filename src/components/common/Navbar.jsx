@@ -65,7 +65,7 @@ export default function Navbar() {
         />
         <div className="hidden md:flex flex-col">
           <p className="text-xl text-white glow-text">Yahampath Chandika</p>
-          <p className="text-base mt-1 text-gray-400">Full-Stack Developer</p>
+          <p className="text-base mt-1 text-gray-200">Full-Stack Developer</p>
         </div>
       </div>
 
