@@ -98,13 +98,13 @@ export default function Testimonials() {
                   />
                 </div>
                 <div className="flex flex-col md:items-end mt-5">
-                  <div className="flex items-center mt-2">
+                  <div className="flex items-center justify-between mt-2">
                     <p className="text-sm md:text-base text-gray-300">{testimonial.contact}</p>
                     <span class="material-symbols-outlined text-sm md:text-lg ml-3 text-gray-300">
                       call
                     </span>
                   </div>
-                  <div className="flex items-start mt-1 cursor-pointer">
+                  <div className="flex items-start justify-between mt-1 cursor-pointer">
                     <p className="text-sm md:text-base text-gray-300 break-all text-left">
                       <a
                         href={`mailto:${testimonial.email}`}
