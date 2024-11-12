@@ -34,7 +34,8 @@
       "userReg",
       "users"
     ],
-    "codeLink": "https://github.com/YahampathChandika/Final_Project_FE",
+    "feCode": "https://github.com/YahampathChandika/Final_Project_FE",
+    "beCode": "https://github.com/YahampathChandika/Final_Project_BE",
     "demoLink": "https://www.vitalcare.website/"
   },
 
@@ -69,8 +70,43 @@
       "medi5",
       "medi6"
     ],
-    "codeLink": "https://github.com/YahampathChandika/Medisense_FE",
+    "feCode": "https://github.com/YahampathChandika/Medisense_FE",
+    "beCode": "https://github.com/YahampathChandika/Medisense_BE",
     "demoLink": "https://medisense-fe.vercel.app/"
+  },
+
+  {
+    "title": "Event and Inventory Management System for Weddings By Sonali",
+    "description": "A web-based system developed to streamline event planning and inventory management for Weddings By Sonali, an event planning company. This application facilitates efficient handling of both inventory and event operations, enhancing organization and management capabilities.",
+    "features": [
+      "Event scheduling and management for various types of events",
+      "Inventory tracking and control with notifications for low stock",
+      "User-friendly dashboard for event and inventory overview",
+      "Role-based access for admin and staff",
+      "Real-time status updates for events and resources",
+      "Integration of event calendar and resource management",
+      "Reports generation for event summaries and inventory usage"
+    ],
+    "techStack": [
+      "React",
+      "Node.js",
+      "Express",
+      "MySQL",
+      "Material UI",
+      "RTK Query",
+      "Tailwind CSS"
+    ],
+    "images": [
+      "wbs6",
+      "wbs2",
+      "wbs3",
+      "wbs1",
+      "wbs4",
+      "wbs5"
+    ],
+    "feCode": "https://github.com/YahampathChandika/Weddings_By_Sonali_FE",
+    "beCode": "https://github.com/YahampathChandika/Weddings_By_Sonali_BE",
+    "demoLink": "https://vercel.com/yahampaths-projects/weddings-by-sonali-fe"
   },
 
   {
@@ -84,7 +120,7 @@
     ],
     "techStack": ["React", "Node", "MySQL", "Google Maps API", "CSS"],
     "images": ["burg1", "burg2", "burg3", "burg4"],
-    "codeLink": "https://github.com/YahampathChandika/Burgeon_Tours",
+    "feCode": "https://github.com/YahampathChandika/Burgeon_Tours",
     "demoLink": "https://burgeon-tours.vercel.app/"
   },
 
@@ -99,7 +135,7 @@
     ],
     "techStack": ["React", "CSS", "Bootstrap", "Rsuite"],
     "images": ["green1", "green5", "green4", "green3", "green2"],
-    "codeLink": "https://github.com/YahampathChandika/GreenLight",
+    "feCode": "https://github.com/YahampathChandika/GreenLight",
     "demoLink": "https://green-light-neon.vercel.app/"
   },
 
@@ -136,7 +172,8 @@
       "lux2",
       "lux1"
     ],
-    "codeLink": "https://github.com/YahampathChandika/Car-Store-FE",
+    "feCode": "https://github.com/YahampathChandika/Car-Store-FE",
+    "beCode": "https://github.com/YahampathChandika/Car-Store-BE",
     "demoLink": "https://luxuryrides.vercel.app/"
   }
 ]

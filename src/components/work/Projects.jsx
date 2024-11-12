@@ -25,6 +25,13 @@ import medi6 from "../../assets/images/medisense (6).png";
 import medi7 from "../../assets/images/medisense (7).png";
 import medi8 from "../../assets/images/medisense (8).png";
 
+import wbs1 from "../../assets/images/wbs (1).png";
+import wbs2 from "../../assets/images/wbs (2).png";
+import wbs3 from "../../assets/images/wbs (3).png";
+import wbs4 from "../../assets/images/wbs (4).png";
+import wbs5 from "../../assets/images/wbs (5).png";
+import wbs6 from "../../assets/images/wbs (6).png";
+
 import burg1 from "../../assets/images/burg (1).png";
 import burg2 from "../../assets/images/burg (2).png";
 import burg3 from "../../assets/images/burg (3).png";
@@ -76,6 +83,13 @@ export default function Projects() {
     medi7,
     medi8,
 
+    wbs1,
+    wbs2,
+    wbs3,
+    wbs4,
+    wbs5,
+    wbs6,
+
     burg1,
     burg2,
     burg3,
@@ -86,7 +100,7 @@ export default function Projects() {
     green3,
     green4,
     green5,
-    
+
     lux1,
     lux2,
     lux3,
@@ -262,20 +276,38 @@ export default function Projects() {
               </div>
 
               <div
-                className={`flex space-x-6 md:space-x-12 justify-between ${
+                className={`flex space-x-6 md:space-x-20 justify-between ${
                   index % 2 === 0 ? "md:justify-end" : "md:justify-start"
                 } mt-8`}
               >
                 <a
-                  href={project.codeLink}
+                  href={project.feCode}
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={(e) => e.stopPropagation()}
                   className="flex items-center cursor-pointer transition-all neon-hover"
                 >
                   <i className="fab fa-github text-xl md:text-3xl rounded-full border border-gray-300 w-6 md:w-10 h-6 md:h-10 flex items-center justify-center"></i>
-                  <p className="ml-2 md:ml-4">Code</p>
+                  <p className="ml-2 md:ml-4 flex">
+                    FE<span className="hidden md:block">&nbsp;Code</span>
+                  </p>
                 </a>
+                
+                {project.beCode && (
+                  <a
+                    href={project.beCode}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={(e) => e.stopPropagation()}
+                    className="flex items-center cursor-pointer transition-all neon-hover"
+                  >
+                    <i className="fas fa-code md:text-2xl rounded-full border border-gray-300 w-6 md:w-10 h-6 md:h-10 flex items-center justify-center"></i>
+                    <p className="ml-2 md:ml-4 flex">
+                      BE<span className="hidden md:block">&nbsp;Code</span>
+                    </p>
+                  </a>
+                )}
+
                 <a
                   href={project.demoLink}
                   target="_blank"
