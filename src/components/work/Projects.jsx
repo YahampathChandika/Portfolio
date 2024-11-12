@@ -288,11 +288,11 @@ export default function Projects() {
                   className="flex items-center cursor-pointer transition-all neon-hover"
                 >
                   <i className="fab fa-github text-xl md:text-3xl rounded-full border border-gray-300 w-6 md:w-10 h-6 md:h-10 flex items-center justify-center"></i>
-                  <p className="ml-2 md:ml-4 flex">
+                  <p className="ml-2 md:ml-4 flex text-sm md:text-lg">
                     FE<span className="hidden md:block">&nbsp;Code</span>
                   </p>
                 </a>
-                
+
                 {project.beCode && (
                   <a
                     href={project.beCode}
@@ -302,7 +302,7 @@ export default function Projects() {
                     className="flex items-center cursor-pointer transition-all neon-hover"
                   >
                     <i className="fas fa-code md:text-2xl rounded-full border border-gray-300 w-6 md:w-10 h-6 md:h-10 flex items-center justify-center"></i>
-                    <p className="ml-2 md:ml-4 flex">
+                    <p className="ml-2 md:ml-4 flex text-sm md:text-lg">
                       BE<span className="hidden md:block">&nbsp;Code</span>
                     </p>
                   </a>
@@ -318,7 +318,7 @@ export default function Projects() {
                   <span className="material-symbols-outlined text-xl md:text-3xl rounded-full border border-gray-300 w-6 md:w-10 h-6 md:h-10 flex items-center justify-center">
                     laptop_mac
                   </span>
-                  <p className="ml-2 md:ml-4">Demo</p>
+                  <p className="ml-2 md:ml-4 flex text-sm md:text-lg">Demo</p>
                 </a>
               </div>
             </div>
