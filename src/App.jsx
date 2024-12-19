@@ -3,6 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import Navbar from "./components/common/Navbar";
 import Work from "./pages/Work";
 import Info from "./pages/Info";
+import { Analytics } from "@vercel/analytics/react";
 
 export default function App() {
   return (
@@ -14,6 +15,7 @@ export default function App() {
           <Route path="/info" element={<Info />} />
         </Routes>
       </div>
+      <Analytics/>
     </div>
   );
 }
