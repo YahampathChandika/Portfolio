@@ -4,6 +4,7 @@ import Navbar from "./components/common/Navbar";
 import Work from "./pages/Work";
 import Info from "./pages/Info";
 import { Analytics } from "@vercel/analytics/react";
+import FloatingChatbot from "./components/common/FloatingChatbot";
 
 export default function App() {
   return (
@@ -15,7 +16,8 @@ export default function App() {
           <Route path="/info" element={<Info />} />
         </Routes>
       </div>
-      <Analytics/>
+      <FloatingChatbot />
+      <Analytics />
     </div>
   );
 }
