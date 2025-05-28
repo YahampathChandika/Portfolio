@@ -1,5 +1,51 @@
 import { useState, useRef, useEffect } from "react";
 
+// Component to render markdown-like text with clickable links
+function MessageContent({ text }) {
+  // Function to parse and render text with markdown formatting
+  const renderText = (text) => {
+    // Split text by markdown patterns and URLs
+    const parts = text.split(/(\*\*[^*]+\*\*|https?:\/\/[^\s]+)/g);
+
+    return parts.map((part, index) => {
+      // Handle bold text (**text**)
+      if (part.startsWith("**") && part.endsWith("**")) {
+        const boldText = part.slice(2, -2);
+        return (
+          <strong key={index} className="font-semibold text-blue-200">
+            {boldText}
+          </strong>
+        );
+      }
+
+      // Handle URLs
+      if (part.match(/^https?:\/\//)) {
+        return (
+          <a
+            key={index}
+            href={part}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-300 hover:text-blue-200 underline underline-offset-2 transition-colors duration-200"
+          >
+            {part}
+          </a>
+        );
+      }
+
+      // Handle line breaks and regular text
+      return part.split("\n").map((line, lineIndex, array) => (
+        <span key={`${index}-${lineIndex}`}>
+          {line}
+          {lineIndex < array.length - 1 && <br />}
+        </span>
+      ));
+    });
+  };
+
+  return <div>{renderText(text)}</div>;
+}
+
 export default function ChatWindow() {
   const [messages, setMessages] = useState([
     {
@@ -92,7 +138,7 @@ export default function ChatWindow() {
       }`}
     >
       {/* Chat Widget */}
-      <div className="relative w-full h-full">
+      <div className="relative w-full h-full flex justify-end">
         {/* Collapsed State - Chat Button */}
         {!isExpanded && (
           <button
@@ -122,7 +168,10 @@ export default function ChatWindow() {
                 <div className="text-white/60 text-xs">About Yahampath</div>
               </div>
             </div>
-            <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+            <span className="relative flex size-2">
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-300 opacity-75"></span>
+              <span className="relative inline-flex size-2 rounded-full bg-green-400"></span>
+            </span>
           </button>
         )}
 
@@ -149,7 +198,7 @@ export default function ChatWindow() {
                 </div>
                 <div>
                   <div className="text-white text-sm font-medium">
-                    Portfolio Assistant
+                    Personal Assistant
                   </div>
                   <div className="flex items-center gap-2 text-xs text-white/60">
                     <div className="w-1.5 h-1.5 bg-green-400 rounded-full animate-pulse"></div>
@@ -214,7 +263,7 @@ export default function ChatWindow() {
                           : "bg-white/10 text-white border border-white/20 rounded-bl-sm"
                       }`}
                     >
-                      {msg.text}
+                      <MessageContent text={msg.text} />
                     </div>
                     <span className="text-xs text-white/40 mt-1 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
                       {formatTime(msg.timestamp)}
