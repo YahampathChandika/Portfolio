@@ -284,23 +284,23 @@ export default function ChatWindow() {
                   </div>
                   <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl rounded-bl-sm px-3 py-2">
                     <div className="flex items-center gap-1">
+                      <span className="text-xs text-white/60 mr-1">
+                        Thinking
+                      </span>
                       <div className="flex gap-1">
                         <div
-                          className="w-1.5 h-1.5 bg-white/60 rounded-full animate-bounce"
+                          className="w-1 h-1 bg-white/60 rounded-full animate-bounce"
                           style={{ animationDelay: "0ms" }}
                         ></div>
                         <div
-                          className="w-1.5 h-1.5 bg-white/60 rounded-full animate-bounce"
+                          className="w-1 h-1 bg-white/60 rounded-full animate-bounce"
                           style={{ animationDelay: "150ms" }}
                         ></div>
                         <div
-                          className="w-1.5 h-1.5 bg-white/60 rounded-full animate-bounce"
+                          className="w-1 h-1 bg-white/60 rounded-full animate-bounce"
                           style={{ animationDelay: "300ms" }}
                         ></div>
                       </div>
-                      <span className="text-xs text-white/60 ml-2">
-                        Thinking...
-                      </span>
                     </div>
                   </div>
                 </div>
