@@ -133,22 +133,24 @@ export default function ChatWindow() {
 
   return (
     <div
-      className={`fixed bottom-6 right-6 z-50 transition-all duration-500 ease-out ${
-        isExpanded ? "w-96 h-[600px]" : "w-80 h-16"
+      className={`fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 transition-all duration-500 ease-out ${
+        isExpanded
+          ? "w-[calc(100vw-2rem)] sm:w-96 h-[calc(100vh-2rem)] sm:h-[600px] max-w-md"
+          : "w-64 sm:w-80 h-12 sm:h-16"
       }`}
     >
       {/* Chat Widget */}
-      <div className="relative w-full h-full flex justify-end">
+      <div className="relative w-full h-full">
         {/* Collapsed State - Chat Button */}
         {!isExpanded && (
           <button
             onClick={() => setIsExpanded(true)}
-            className="w-full h-full bg-black/40 backdrop-blur-md border border-white/10 rounded-2xl hover:bg-black/50 transition-all duration-300 flex items-center justify-between px-6 group shadow-2xl hover:shadow-black/20"
+            className="w-full h-full bg-black/40 backdrop-blur-md border border-white/10 rounded-2xl hover:bg-black/50 transition-all duration-300 flex items-center justify-between px-3 sm:px-6 group shadow-2xl hover:shadow-black/20"
           >
-            <div className="flex items-center gap-3">
-              <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center shadow-lg">
+            <div className="flex items-center gap-2 sm:gap-3 min-w-0">
+              <div className="w-6 h-6 sm:w-8 sm:h-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center shadow-lg flex-shrink-0">
                 <svg
-                  className="w-4 h-4 text-white"
+                  className="w-3 h-3 sm:w-4 sm:h-4 text-white"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -161,14 +163,16 @@ export default function ChatWindow() {
                   />
                 </svg>
               </div>
-              <div className="text-left">
-                <div className="text-white text-sm font-medium">
+              <div className="text-left min-w-0 flex-1">
+                <div className="text-white text-xs sm:text-sm font-medium truncate">
                   Ask me anything
                 </div>
-                <div className="text-white/60 text-xs">About Yahampath</div>
+                <div className="text-white/60 text-xs hidden sm:block">
+                  About Yahampath
+                </div>
               </div>
             </div>
-            <span className="relative flex size-2">
+            <span className="relative flex size-2 flex-shrink-0">
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-300 opacity-75"></span>
               <span className="relative inline-flex size-2 rounded-full bg-green-400"></span>
             </span>
