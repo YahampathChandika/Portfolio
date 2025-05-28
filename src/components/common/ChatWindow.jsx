@@ -135,7 +135,7 @@ export default function ChatWindow() {
     <div
       className={`fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 transition-all duration-500 ease-out ${
         isExpanded
-          ? "w-[calc(100vw-2rem)] sm:w-96 h-[calc(100vh-2rem)] sm:h-[600px] max-w-md"
+          ? "w-[calc(100vw-24px)] sm:w-96 h-[85vh] sm:h-[600px] max-w-md"
           : "w-64 sm:w-80 h-12 sm:h-16"
       }`}
     >
@@ -310,8 +310,8 @@ export default function ChatWindow() {
 
             {/* Quick Suggestions */}
             {messages.length === 1 && (
-              <div className="px-4 pb-2">
-                <div className="flex flex-wrap gap-2">
+              <div className="px-3 sm:px-4 pb-2">
+                <div className="flex flex-wrap gap-1.5 sm:gap-2">
                   {quickSuggestions.map((suggestion, idx) => (
                     <button
                       key={idx}
@@ -319,7 +319,7 @@ export default function ChatWindow() {
                         setInput(suggestion);
                         inputRef.current?.focus();
                       }}
-                      className="px-3 py-1.5 text-xs bg-white/10 hover:bg-white/20 text-white/80 rounded-full border border-white/20 transition-all duration-200 hover:scale-105"
+                      className="px-2.5 sm:px-3 py-1 sm:py-1.5 text-xs bg-white/10 hover:bg-white/20 text-white/80 rounded-full border border-white/20 transition-all duration-200 hover:scale-105"
                       disabled={loading}
                     >
                       {suggestion}
