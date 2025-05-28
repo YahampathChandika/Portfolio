@@ -1,4 +1,6 @@
 import { useState, useRef, useEffect } from "react";
+import { FaRegUser } from "react-icons/fa";
+import { FcAssistant } from "react-icons/fc";
 
 // Component to render markdown-like text with clickable links
 function MessageContent({ text }) {
@@ -251,7 +253,7 @@ export default function ChatWindow() {
                         : "bg-gradient-to-br from-blue-500 to-purple-600 text-white"
                     }`}
                   >
-                    {msg.type === "user" ? "Y" : "AI"}
+                    {msg.type === "user" ? <FaRegUser /> : <FcAssistant />}
                   </div>
 
                   {/* Message */}
@@ -280,7 +282,7 @@ export default function ChatWindow() {
               {loading && (
                 <div className="flex items-end gap-2 animate-slideUp">
                   <div className="w-6 h-6 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 text-white flex-shrink-0 flex items-center justify-center text-xs font-bold">
-                    AI
+                    <FcAssistant />
                   </div>
                   <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl rounded-bl-sm px-3 py-2">
                     <div className="flex items-center gap-1">
