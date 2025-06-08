@@ -1,31 +1,47 @@
 [
-    {
-      "id": 1,
-      "title": " Software Engineer, Intern",
-      "company": "Amerck Inc. StratfordAve, Colombo.",
-      "period": "Aug 2023 - Oct 2023",
-      "description": [
-        "Interned as a Frontend Developer.",
-        "Developed user interfaces for web applications using React, Redux, RTK Query, and Tailwind CSS.",
-        "Collaborated on UI/UX design and prototyping using Figma and Miro.",
-        "Participated in agile development processes using Jira and Confluence.",
-        "Managed version control and CI/CD workflows through GitLab."
-      ],
-      "logo": "https://media.licdn.com/dms/image/v2/C560BAQETSc3Zhz5TLA/company-logo_200_200/company-logo_200_200/0/1631302870027?e=2147483647&v=beta&t=5ekulRIDfJkdT9jcXbAHTxtDUS_hV-QeoMp1b7IwqDM"
-    },
-    {
-      "id": 2,
-      "title": " Software Engineer, Intern",
-      "company": "Medisense Laboratory, Battaramulla.",
-      "period": "Apr 2022 - Sep 2022",
-      "description": [
-        "Interned as a Full-Stack Developer.",
-        "Developed and implemented a laboratory management system to optimize operations.",
-        "Handled backend development with Node.js, Express, and Sequelize-ORM.",
-        "Collaborated on UI/UX design and prototyping with Figma and Miro.",
-        "Acquired hands-on experience in database design and system architecture."
-      ],
-      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTom4zlVpZLy4hI05AjAE-Bjw0ctLfnlVcJ-Q&s"
-    }
-  ]
-  
+  {
+    "id": 1,
+    "title": " Software Engineer",
+    "company": "Olee AI LLC. Malabe, Colombo.",
+    "period": "Dec 2024 - Present",
+    "description": [
+      "Working as a Full-Stack Developer.",
+      "Developing and maintaining platforms to manage various AI products.",
+      "Building and optimizing full-stack applications using Next.js for enhanced user experiences.",
+      "Hands-on experience with various databases including Supabase, MySQL, and MongoDB.",
+      "Deploying and hosting applications using Vercel and AWS.",
+      "Managing version control and CI/CD workflows through GitHub.",      
+      "Following Agile development processes using Slack and ClickUp."
+    ],
+
+    "logo": "https://media.licdn.com/dms/image/v2/D560BAQG4HGzuSpwc7w/company-logo_200_200/company-logo_200_200/0/1730808023708?e=2147483647&v=beta&t=VYK4kQhehZGcGkyknm6FRyQqFbod9L4vArzlmMrcweg"
+  },
+  {
+    "id": 2,
+    "title": " Software Engineer, Intern",
+    "company": "Amerck Inc. StratfordAve, Colombo.",
+    "period": "Aug 2023 - Oct 2023",
+    "description": [
+      "Interned as a Frontend Developer.",
+      "Developed user interfaces for web applications using React, Redux, RTK Query, and Tailwind CSS.",
+      "Collaborated on UI/UX design and prototyping using Figma and Miro.",
+      "Participated in agile development processes using Jira and Confluence.",
+      "Managed version control and CI/CD workflows through GitLab."
+    ],
+    "logo": "https://media.licdn.com/dms/image/v2/C560BAQETSc3Zhz5TLA/company-logo_200_200/company-logo_200_200/0/1631302870027?e=2147483647&v=beta&t=5ekulRIDfJkdT9jcXbAHTxtDUS_hV-QeoMp1b7IwqDM"
+  },
+  {
+    "id": 3,
+    "title": " Software Engineer, Intern",
+    "company": "Medisense Laboratory, Battaramulla.",
+    "period": "Apr 2022 - Sep 2022",
+    "description": [
+      "Interned as a Full-Stack Developer.",
+      "Developed and implemented a laboratory management system to optimize operations.",
+      "Handled backend development with Node.js, Express, and Sequelize-ORM.",
+      "Collaborated on UI/UX design and prototyping with Figma and Miro.",
+      "Acquired hands-on experience in database design and system architecture."
+    ],
+    "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTom4zlVpZLy4hI05AjAE-Bjw0ctLfnlVcJ-Q&s"
+  }
+]

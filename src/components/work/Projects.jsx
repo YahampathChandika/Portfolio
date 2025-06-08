@@ -214,7 +214,7 @@ export default function Projects() {
           initial={
             isMobile
               ? { y: 50, opacity: 0 } // Same animation for mobile
-              : { x: index % 2 === 0 ? -200 : 200, opacity: 0 } // Alternate for desktop
+              : { x: index % 2 === 0 ? -100 : 100, opacity: 0 } // Alternate for desktop
           }
           whileInView={{ x: 0, y: 0, opacity: 1 }}
           transition={{ duration: 0.8, ease: "easeInOut" }}
