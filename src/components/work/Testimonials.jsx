@@ -16,7 +16,7 @@ const testimonialsData = [
     name: "Mr. Sahan Hettige",
     position: "ICT Project Manager,\nAmerck Inc.\nStratfordAve,\nColombo.",
     image:
-      "https://media.licdn.com/dms/image/v2/D5603AQEiTwOltipczg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1708172411682?e=1736380800&v=beta&t=vfPiTDe8J6ka4AvHy513ua4P4NqaXyG3_PfmeIXkTY8",
+      "https://media.licdn.com/dms/image/v2/D5603AQG5RyIleqwxbw/profile-displayphoto-shrink_200_200/B56ZW0ugmkGoAc-/0/1742493848558?e=2147483647&v=beta&t=YROqKSzy6JER9rbb4QuG3W70uvVsaFr7TWyvnySV4ek",
     contact: "+94 71 258 5352",
     email: "sahanhettige18@gmail.com",
   },
