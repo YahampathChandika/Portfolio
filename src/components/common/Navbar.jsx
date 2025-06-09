@@ -130,9 +130,20 @@ export default function Navbar() {
           </span>
         </a>
 
-        
-        <a
+        {/* <a
           href="https://drive.google.com/file/d/1Xc_jCwd075Uz2obHd84ZNtyIrXJCVNPs/view?usp=drive_link"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center neon-hover"
+        >
+          Resume
+          <span className="material-symbols-outlined text-xl ml-1">
+            call_made
+          </span>
+        </a> */}
+
+        <a
+          href="/resume.pdf"
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center neon-hover"
@@ -204,7 +215,7 @@ export default function Navbar() {
               </span>
             </a>
             <a
-              href="https://drive.google.com/file/d/1Xc_jCwd075Uz2obHd84ZNtyIrXJCVNPs/view?usp=drive_link"
+              href="/resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="neon-hover"
