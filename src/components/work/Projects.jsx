@@ -57,6 +57,35 @@ import lux11 from "../../assets/images/lux (11).png";
 import lux12 from "../../assets/images/lux (12).png";
 import lux13 from "../../assets/images/lux (13).png";
 
+import lms1 from "../../assets/images/lms-1.png";
+import lms2 from "../../assets/images/lms-2.png";
+import lms3 from "../../assets/images/lms-3.png";
+import lms4 from "../../assets/images/lms-4.png";
+import lms5 from "../../assets/images/lms-5.png";
+import lms6 from "../../assets/images/lms-6.png";
+import lms7 from "../../assets/images/lms-7.png";
+
+import futsal0 from "../../assets/images/futsal0.png";
+import futsal1 from "../../assets/images/futsal1.png";
+import futsal2 from "../../assets/images/futsal2.png";
+import futsal3 from "../../assets/images/futsal3.png";
+import futsal4 from "../../assets/images/futsal4.png";
+import futsal5 from "../../assets/images/futsal5.png";
+import futsal6 from "../../assets/images/futsal6.png";
+import futsal7 from "../../assets/images/futsal7.png";
+
+import ecom1 from "../../assets/images/ecom1.png";
+import ecom2 from "../../assets/images/ecom2.png";
+import ecom3 from "../../assets/images/ecom3.png";
+import ecom4 from "../../assets/images/ecom4.png";
+import ecom5 from "../../assets/images/ecom5.png";
+import ecom6 from "../../assets/images/ecom6.png";
+import ecom7 from "../../assets/images/ecom7.png";
+import ecom8 from "../../assets/images/ecom8.png";
+import ecom9 from "../../assets/images/ecom9.png";
+import ecom10 from "../../assets/images/ecom10.png";
+import ecom11 from "../../assets/images/ecom11.png";
+
 export default function Projects() {
   const [projects, setProjects] = useState([]);
   const [isMobile, setIsMobile] = useState(false);
@@ -114,6 +143,35 @@ export default function Projects() {
     lux11,
     lux12,
     lux13,
+
+    lms1,
+    lms2,
+    lms3,
+    lms4,
+    lms5,
+    lms6,
+    lms7,
+
+    futsal0,
+    futsal1,
+    futsal2,
+    futsal3,
+    futsal4,
+    futsal5,
+    futsal6,
+    futsal7,
+
+    ecom1,
+    ecom2,
+    ecom3,
+    ecom4,
+    ecom5,
+    ecom6,
+    ecom7,
+    ecom8,
+    ecom9,
+    ecom10,
+    ecom11,
   };
 
   useEffect(() => {
@@ -289,7 +347,16 @@ export default function Projects() {
                 >
                   <i className="fab fa-github text-xl md:text-3xl rounded-full border border-gray-300 w-6 md:w-10 h-6 md:h-10 flex items-center justify-center"></i>
                   <p className="ml-2 md:ml-4 flex text-sm md:text-lg">
-                    FE<span className="hidden md:block">&nbsp;Code</span>
+                    {project.beCode ? (
+                      <>
+                        FE<span className="hidden md:block">&nbsp;Code</span>
+                      </>
+                    ) : (
+                      <>
+                        <span className="hidden md:block">Project&nbsp;</span>
+                        Code
+                      </>
+                    )}
                   </p>
                 </a>
 

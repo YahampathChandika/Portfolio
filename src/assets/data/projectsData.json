@@ -40,6 +40,71 @@
   },
 
   {
+    "title": "Learning Management System for Anuka Jagoda Physics Academy",
+    "description": "A comprehensive web-based LMS tailored for Anuka Jagoda Physics Academy to manage online classes, student performance, and academic content efficiently. The system supports seamless learning experiences for both students and instructors, featuring real-time progress tracking and content delivery.",
+    "features": [
+      "Course creation and management for physics curriculum",
+      "Student enrollment and progress tracking",
+      "Video lectures and resource uploads for each module",
+      "Quiz and assignment management with auto-grading",
+      "User-friendly dashboard for instructors and students",
+      "Role-based access for admin, teacher, and student accounts",
+      "Real-time performance analytics and reports",
+      "Notifications and reminders for class schedules and deadlines"
+    ],
+    "techStack": [
+      "React.js",
+      "Node.js",
+      "Shadcn UI",
+      "Tailwind CSS",
+      "Express",
+      "Vite",
+      "Supabase",
+      "Vercel"
+    ],
+    "images": ["lms1", "lms2", "lms3", "lms4", "lms5", "lms6", "lms7"],
+    "feCode": "https://github.com/YahampathChandika/LMS_FE",
+    "demoLink": "https://jadda-lms.vercel.app"
+  },
+
+  {
+    "title": "HAS Apparel – Modern Clothing Store",
+    "description": "HAS Apparel is a stylish and functional eCommerce platform for a contemporary clothing brand. It features a customer-centric online store alongside a dedicated management system for handling inventory, orders, and product listings seamlessly.",
+    "features": [
+      "Modern online storefront for browsing and purchasing apparel",
+      "Product categorization by gender, type, and collection",
+      "Real-time inventory and order management platform",
+      "Secure customer registration and checkout flow",
+      "Admin dashboard for managing products, stock, and order statuses",
+      "Mobile-optimized responsive design",
+      "Integrated payment gateway and email notifications"
+    ],
+    "techStack": [
+      "Next.js",
+      "Tailwind CSS",
+      "Supabase",
+      "ShadCN UI",
+      "Vercel",
+      "Stripe"
+    ],
+    "images": [
+      "ecom1",
+      "ecom2",
+      "ecom3",
+      "ecom4",
+      "ecom5",
+      "ecom6",
+      "ecom7",
+      "ecom8",
+      "ecom9",
+      "ecom10",
+      "ecom11"
+    ],
+    "feCode": "https://github.com/YahampathChandika/Clothing-Store",
+    "demoLink": "https://has-apparel.vercel.app/"
+  },
+
+  {
     "title": "Medical Laboratory Management System",
     "description": "A comprehensive web-based management system developed for Medisense Laboratory Pvt Ltd, designed to streamline and automate operations across all departments of the laboratory.",
     "features": [
@@ -76,6 +141,34 @@
   },
 
   {
+    "title": "FutsalHub – Futsal Match and Player Management System",
+    "description": "FutsalHub is a modern web application built to manage futsal matches, players, and team activities within a futsal club. It simplifies the coordination of games, player availability, and performance tracking through an intuitive, real-time interface.",
+    "features": [
+      "Schedule and manage futsal matches with ease",
+      "Player registration and team assignment",
+      "Track player attendance and performance stats",
+      "Match history and upcoming game calendar",
+      "Admin and player roles with secure access",
+      "Match results and player voting system",
+      "Clean and responsive UI optimized for mobile and desktop"
+    ],
+    "techStack": ["Next.js", "ShadCN UI", "Supabase", "Tailwind CSS", "Vercel"],
+    "images": [
+      "futsal7",
+      "futsal0",
+      "futsal1",
+      "futsal2",
+      "futsal3",
+      "futsal4",
+      "futsal5",
+      "futsal6"
+    ],
+    "feCode": "https://github.com/YahampathChandika/Futsal_Manager",
+    "beCode": "",
+    "demoLink": "https://futsalhub-hq.vercel.app/"
+  },
+
+  {
     "title": "Event and Inventory Management System for Weddings By Sonali",
     "description": "A web-based system developed to streamline event planning and inventory management for Weddings By Sonali, an event planning company. This application facilitates efficient handling of both inventory and event operations, enhancing organization and management capabilities.",
     "features": [
@@ -96,14 +189,7 @@
       "RTK Query",
       "Tailwind CSS"
     ],
-    "images": [
-      "wbs6",
-      "wbs2",
-      "wbs3",
-      "wbs1",
-      "wbs4",
-      "wbs5"
-    ],
+    "images": ["wbs6", "wbs2", "wbs3", "wbs1", "wbs4", "wbs5"],
     "feCode": "https://github.com/YahampathChandika/Weddings_By_Sonali_FE",
     "beCode": "https://github.com/YahampathChandika/Weddings_By_Sonali_BE",
     "demoLink": "https://vercel.com/yahampaths-projects/weddings-by-sonali-fe"

@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "title": " Software Engineer",
+    "title": " Associate Software Engineer",
     "company": "Olee AI LLC. Malabe, Colombo.",
     "period": "Dec 2024 - Present",
     "description": [
@@ -10,7 +10,7 @@
       "Building and optimizing full-stack applications using Next.js for enhanced user experiences.",
       "Hands-on experience with various databases including Supabase, MySQL, and MongoDB.",
       "Deploying and hosting applications using Vercel and AWS.",
-      "Managing version control and CI/CD workflows through GitHub.",      
+      "Managing version control and CI/CD workflows through GitHub.",
       "Following Agile development processes using Slack and ClickUp."
     ],
 

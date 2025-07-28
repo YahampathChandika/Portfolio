@@ -23,7 +23,7 @@ export default function HeroSection() {
           solutions.
         </p>
         <p className="text-gray-400 text-sm md:text-lg italic">
-          "Turning ideas into responsive, functional designs."
+          "Transforming imaginative ideas into usable, unforgettable web experiences."
         </p>
       </div>
       <div

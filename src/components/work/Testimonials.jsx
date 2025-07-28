@@ -6,7 +6,7 @@ const testimonialsData = [
   {
     name: "Mr. R. A. Prabhath Buddhika",
     position:
-      "Senior Lecturer / HoD \nDepartment of Electrical, Electronic and Systems Engineering, \nFaculty of Engineering,\nNSBM Green University,\nHomagama,\nSri Lanka.",
+      "Senior Lecturer / HoD \nDepartment of Electrical, Electronic and Systems Engineering, \nFaculty of Engineering,\nNSBM Green University.",
     image:
       "https://i1.rgstatic.net/ii/profile.image/11431281209793948-1701837952770_Q512/Prabhath-Buddhika-2.jpg",
     contact: "+94 71 603 7498",
