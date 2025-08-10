@@ -74,6 +74,7 @@ import futsal5 from "../../assets/images/futsal5.png";
 import futsal6 from "../../assets/images/futsal6.png";
 import futsal7 from "../../assets/images/futsal7.png";
 
+import ecom0 from "../../assets/images/ecom0.png";
 import ecom1 from "../../assets/images/ecom1.png";
 import ecom2 from "../../assets/images/ecom2.png";
 import ecom3 from "../../assets/images/ecom3.png";
@@ -85,6 +86,7 @@ import ecom8 from "../../assets/images/ecom8.png";
 import ecom9 from "../../assets/images/ecom9.png";
 import ecom10 from "../../assets/images/ecom10.png";
 import ecom11 from "../../assets/images/ecom11.png";
+import ecom12 from "../../assets/images/ecom12.png";
 
 export default function Projects() {
   const [projects, setProjects] = useState([]);
@@ -161,6 +163,7 @@ export default function Projects() {
     futsal6,
     futsal7,
 
+    ecom0,
     ecom1,
     ecom2,
     ecom3,
@@ -172,6 +175,7 @@ export default function Projects() {
     ecom9,
     ecom10,
     ecom11,
+    ecom12
   };
 
   useEffect(() => {

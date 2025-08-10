@@ -88,6 +88,7 @@
       "Stripe"
     ],
     "images": [
+      "ecom0",
       "ecom1",
       "ecom2",
       "ecom3",
@@ -98,7 +99,8 @@
       "ecom8",
       "ecom9",
       "ecom10",
-      "ecom11"
+      "ecom11",
+      "ecom12"
     ],
     "feCode": "https://github.com/YahampathChandika/Clothing-Store",
     "demoLink": "https://has-apparel.vercel.app/"
