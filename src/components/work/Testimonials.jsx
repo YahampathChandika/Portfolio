@@ -4,6 +4,20 @@ import { motion } from "framer-motion";
 
 const testimonialsData = [
   {
+    name: "Mr. Dilshan Abeygunawardana",
+    position: "Chief Executive Officer,\nOlee AI LLC\nMalabe,\nColombo.",
+    image: "https://dilshan.me/images/dilshanabeygunawardananetworth.png",
+    contact: "+94 71 970 6699",
+    email: "x@dilshan.me",
+  },
+  {
+    name: "Mr. Dileepa Jayawardena",
+    position: "Chief Technology Officer,\nOlee AI LLC\nMalabe,\nColombo.",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrbVGXRYA5oZOeIFwFq_tcB5o8slMaxuNEww&s",
+    contact: "+94 71 012 8456",
+    email: "dileepa@olee.ai",
+  },
+  {
     name: "Mr. R. A. Prabhath Buddhika",
     position:
       "Senior Lecturer / HoD \nDepartment of Electrical, Electronic and Systems Engineering, \nFaculty of Engineering,\nNSBM Green University.",
@@ -11,14 +25,6 @@ const testimonialsData = [
       "https://i1.rgstatic.net/ii/profile.image/11431281209793948-1701837952770_Q512/Prabhath-Buddhika-2.jpg",
     contact: "+94 71 603 7498",
     email: "prabhath.b@nsbm.ac.lk",
-  },
-  {
-    name: "Mr. Sahan Hettige",
-    position: "ICT Project Manager,\nAmerck Inc.\nStratfordAve,\nColombo.",
-    image:
-      "https://media.licdn.com/dms/image/v2/D5603AQG5RyIleqwxbw/profile-displayphoto-shrink_200_200/B56ZW0ugmkGoAc-/0/1742493848558?e=2147483647&v=beta&t=YROqKSzy6JER9rbb4QuG3W70uvVsaFr7TWyvnySV4ek",
-    contact: "+94 71 258 5352",
-    email: "sahanhettige18@gmail.com",
   },
 ];
 
@@ -94,12 +100,14 @@ export default function Testimonials() {
                   <img
                     src={testimonial.image}
                     alt={testimonial.name}
-                    className="w-10 md:w-20 h-10 md:h-20 rounded-full object-cover ml-2"
+                    className="w-16 md:w-36 h-16 md:h-36 rounded-full object-cover ml-2"
                   />
                 </div>
-                <div className="flex flex-col md:items-end mt-5">
+                <div className="flex flex-col items-end mt-5">
                   <div className="flex items-center justify-between mt-2">
-                    <p className="text-sm md:text-base text-gray-300">{testimonial.contact}</p>
+                    <p className="text-sm md:text-base text-gray-300">
+                      {testimonial.contact}
+                    </p>
                     <span class="material-symbols-outlined text-sm md:text-lg ml-3 text-gray-300">
                       call
                     </span>
