@@ -273,7 +273,7 @@ export default function Skills() {
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.1 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.3 }}
         >
           <p className="text-gray-400 md:text-lg mb-1 md:mb-3">My Abilities</p>
           <p className="text-white text-5xl md:text-6xl font-bold">Skills.</p>
@@ -308,7 +308,7 @@ export default function Skills() {
                     visible: {
                       opacity: 1,
                       x: 0,
-                      transition: { duration: 0.5, ease: "easeOut" },
+                      transition: { duration: 0.3, ease: "easeOut" },
                     },
                   }}
                 >
@@ -322,7 +322,7 @@ export default function Skills() {
                       visible: {
                         scaleX: 1,
                         transition: {
-                          duration: 0.6,
+                          duration: 0.4,
                           delay: 0.2,
                           ease: "easeOut",
                         },
@@ -352,7 +352,7 @@ export default function Skills() {
                       variants={skillVariants}
                       whileHover={{
                         scale: 1.05,
-                        transition: { duration: 0.2 },
+                        transition: { duration: 0.1 },
                       }}
                       className="group"
                     >
