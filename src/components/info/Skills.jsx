@@ -240,36 +240,26 @@ export default function Skills() {
     return skills.filter((skill) => skill.category === category);
   };
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-        delayChildren: 0.2,
-      },
-    },
-  };
-
-  const categoryVariants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.6,
-        ease: "easeOut",
-      },
-    },
+  // More responsive viewport settings for mobile
+  const getViewportSettings = () => {
+    if (typeof window !== "undefined" && window.innerWidth <= 768) {
+      return { once: true, amount: 0.1 }; // Trigger early on mobile
+    }
+    return { once: true, amount: 0.2 }; // Standard for desktop
   };
 
   const skillVariants = {
-    hidden: { opacity: 0, scale: 0.8 },
+    hidden: {
+      opacity: 0,
+      scale: 0.9,
+      y: 20,
+    },
     visible: {
       opacity: 1,
       scale: 1,
+      y: 0,
       transition: {
-        duration: 0.4,
+        duration: 0.3,
         ease: "easeOut",
       },
     },
@@ -278,34 +268,84 @@ export default function Skills() {
   return (
     <section className="bg-black text-white py-20 px-6 md:px-40">
       <div className="container mx-auto">
-        <div className="flex flex-col w-full justify-center items-start mb-12">
+        <motion.div
+          className="flex flex-col w-full justify-center items-start mb-12"
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.1 }}
+          transition={{ duration: 0.5 }}
+        >
           <p className="text-gray-400 md:text-lg mb-1 md:mb-3">My Abilities</p>
           <p className="text-white text-5xl md:text-6xl font-bold">Skills.</p>
-        </div>
+        </motion.div>
 
-        <motion.div
-          className="space-y-12"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
-        >
+        <div className="space-y-12">
           {categories.map((category, categoryIndex) => {
             const categorySkills = getSkillsByCategory(category);
             return (
               <motion.div
                 key={category}
                 className="space-y-6"
-                variants={categoryVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={getViewportSettings()}
+                variants={{
+                  hidden: { opacity: 0 },
+                  visible: {
+                    opacity: 1,
+                    transition: {
+                      staggerChildren: 0.05,
+                      delayChildren: 0.1,
+                    },
+                  },
+                }}
               >
-                <div className="flex items-center gap-4 mb-8">
+                {/* Category Header Animation */}
+                <motion.div
+                  className="flex items-center gap-4 mb-6 md:mb-8"
+                  variants={{
+                    hidden: { opacity: 0, x: -30 },
+                    visible: {
+                      opacity: 1,
+                      x: 0,
+                      transition: { duration: 0.5, ease: "easeOut" },
+                    },
+                  }}
+                >
                   <h3 className="text-2xl md:text-3xl font-semibold text-white">
                     {category}
                   </h3>
-                  <div className="flex-1 h-px bg-gradient-to-r from-white/30 to-transparent"></div>
-                </div>
+                  <motion.div
+                    className="flex-1 h-px bg-gradient-to-r from-white/30 to-transparent"
+                    variants={{
+                      hidden: { scaleX: 0 },
+                      visible: {
+                        scaleX: 1,
+                        transition: {
+                          duration: 0.6,
+                          delay: 0.2,
+                          ease: "easeOut",
+                        },
+                      },
+                    }}
+                    style={{ transformOrigin: "left" }}
+                  ></motion.div>
+                </motion.div>
 
-                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4 md:gap-6">
+                {/* Skills Grid Animation */}
+                <motion.div
+                  className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4 md:gap-6"
+                  variants={{
+                    hidden: { opacity: 0 },
+                    visible: {
+                      opacity: 1,
+                      transition: {
+                        staggerChildren: 0.05,
+                        delayChildren: 0.3,
+                      },
+                    },
+                  }}
+                >
                   {categorySkills.map((skill, skillIndex) => (
                     <motion.div
                       key={skill.name}
@@ -319,11 +359,11 @@ export default function Skills() {
                       <SkillCard skill={skill} />
                     </motion.div>
                   ))}
-                </div>
+                </motion.div>
               </motion.div>
             );
           })}
-        </motion.div>
+        </div>
       </div>
     </section>
   );
