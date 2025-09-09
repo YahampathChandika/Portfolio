@@ -1,201 +1,329 @@
 import React from "react";
-import Marquee from "react-fast-marquee";
+import { motion } from "framer-motion";
 
 const skills = [
   // Frontend Technologies
   {
     name: "React",
+    category: "Frontend",
     image:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
   },
   {
     name: "Next.js",
+    category: "Frontend",
     image:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
   },
   {
+    name: "Vite",
+    category: "Frontend",
+    image:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vitejs/vitejs-original.svg",
+  },
+  {
     name: "JavaScript",
+    category: "Frontend",
     image:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
   },
   {
     name: "TypeScript",
+    category: "Frontend",
     image:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
   },
   {
     name: "HTML",
+    category: "Frontend",
     image:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
   },
   {
     name: "CSS",
+    category: "Frontend",
     image:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
   },
   {
     name: "Tailwind",
+    category: "Frontend",
     image:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg",
   },
   {
     name: "Shadcn UI",
+    category: "Frontend",
     image: "https://ui.shadcn.com/favicon.ico",
   },
   {
     name: "Bootstrap",
+    category: "Frontend",
     image:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
   },
   {
     name: "Redux",
+    category: "Frontend",
     image:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg",
+  },
+  {
+    name: "Framer Motion",
+    category: "Frontend",
+    image:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/framermotion/framermotion-original.svg",
   },
 
   // Backend Technologies
   {
     name: "Node.js",
+    category: "Backend",
     image:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
   },
   {
     name: "Express.js",
+    category: "Backend",
     image: "https://img.icons8.com/fluency/96/express-js.png",
   },
   {
     name: "Python",
+    category: "Backend",
     image:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
   },
   {
     name: "Java",
+    category: "Backend",
     image:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
   },
   {
     name: "C",
+    category: "Backend",
     image:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg",
+  },
+  {
+    name: "Spring Boot",
+    category: "Backend",
+    image:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg",
   },
 
   // Databases
   {
+    name: "Supabase",
+    category: "Database",
+    image:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/supabase/supabase-original.svg",
+  },
+  {
     name: "MySQL",
+    category: "Database",
     image:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
   },
   {
     name: "MongoDB",
+    category: "Database",
     image:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
   },
   {
     name: "Redis",
+    category: "Database",
     image:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg",
   },
   {
-    name: "Supabase",
-    image:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/supabase/supabase-original.svg",
-  },
-  {
     name: "Sequelize",
+    category: "Database",
     image:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sequelize/sequelize-original.svg",
+  },
+  {
+    name: "Firebase",
+    category: "Database",
+    image:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg",
   },
 
   // Cloud & DevOps
   {
     name: "AWS",
+    category: "Cloud & DevOps",
     image:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg",
   },
   {
     name: "Vercel",
+    category: "Cloud & DevOps",
     image:
       "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vercel/vercel-original.svg",
   },
   {
     name: "Docker",
+    category: "Cloud & DevOps",
     image:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
   },
   {
     name: "Git",
+    category: "Cloud & DevOps",
     image:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
   },
   {
     name: "GitHub",
+    category: "Cloud & DevOps",
     image:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
+  },
+  {
+    name: "Netlify",
+    category: "Cloud & DevOps",
+    image:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/netlify/netlify-original.svg",
   },
 
   // Tools & Methodologies
   {
     name: "Figma",
+    category: "Tools",
     image:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
   },
   {
     name: "Jira",
+    category: "Tools",
     image:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg",
   },
   {
     name: "Confluence",
+    category: "Tools",
     image:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/confluence/confluence-original.svg",
   },
   {
     name: "Slack",
+    category: "Tools",
     image:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/slack/slack-original.svg",
   },
   {
-    name: "REST API",
-    image: "https://img.icons8.com/color/96/api-settings.png",
+    name: "Postman",
+    category: "Tools",
+    image:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg",
   },
   {
-    name: "OOP",
-    image: "https://img.icons8.com/color/96/module.png",
+    name: "Notion",
+    category: "Tools",
+    image:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/notion/notion-original.svg",
   },
 ];
 
 export default function Skills() {
-  // Split the skills list into two halves for the two rows
-  const halfIndex = Math.ceil(skills.length / 2);
-  const rowOneSkills = skills.slice(0, halfIndex);
-  const rowTwoSkills = skills.slice(halfIndex);
+  const categories = [
+    "Frontend",
+    "Backend",
+    "Database",
+    "Cloud & DevOps",
+    "Tools",
+  ];
+
+  const getSkillsByCategory = (category) => {
+    return skills.filter((skill) => skill.category === category);
+  };
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+        delayChildren: 0.2,
+      },
+    },
+  };
+
+  const categoryVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut",
+      },
+    },
+  };
+
+  const skillVariants = {
+    hidden: { opacity: 0, scale: 0.8 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        duration: 0.4,
+        ease: "easeOut",
+      },
+    },
+  };
 
   return (
-    <section className="bg-black text-white py-20">
-      <div className="container mx-auto px-6">
-        <div className="flex flex-col w-full justify-center items-start mb-10">
-          <p className="text-gray-400 md:text-lg mb-1">My Abilities</p>
-          <p className="text-white text-4xl md:text-5xl font-bold">Skills.</p>
+    <section className="bg-black text-white py-20 px-6 md:px-40">
+      <div className="container mx-auto">
+        <div className="flex flex-col w-full justify-center items-start mb-12">
+          <p className="text-gray-400 md:text-lg mb-1 md:mb-3">My Abilities</p>
+          <p className="text-white text-5xl md:text-6xl font-bold">Skills.</p>
         </div>
 
-        {/* Row One */}
-        <Marquee gradient={false} speed={150} className="mb-8">
-          {rowOneSkills.map((skill, index) => (
-            <SkillCard key={index} skill={skill} />
-          ))}
-        </Marquee>
-
-        {/* Row Two */}
-        <Marquee
-          gradient={false}
-          speed={150}
-          direction="right"
-          // pauseOnHover={true}
+        <motion.div
+          className="space-y-12"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
         >
-          {rowTwoSkills.map((skill, index) => (
-            <SkillCard key={index} skill={skill} />
-          ))}
-        </Marquee>
+          {categories.map((category, categoryIndex) => {
+            const categorySkills = getSkillsByCategory(category);
+            return (
+              <motion.div
+                key={category}
+                className="space-y-6"
+                variants={categoryVariants}
+              >
+                <div className="flex items-center gap-4 mb-8">
+                  <h3 className="text-2xl md:text-3xl font-semibold text-white">
+                    {category}
+                  </h3>
+                  <div className="flex-1 h-px bg-gradient-to-r from-white/30 to-transparent"></div>
+                </div>
+
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4 md:gap-6">
+                  {categorySkills.map((skill, skillIndex) => (
+                    <motion.div
+                      key={skill.name}
+                      variants={skillVariants}
+                      whileHover={{
+                        scale: 1.05,
+                        transition: { duration: 0.2 },
+                      }}
+                      className="group"
+                    >
+                      <SkillCard skill={skill} />
+                    </motion.div>
+                  ))}
+                </div>
+              </motion.div>
+            );
+          })}
+        </motion.div>
       </div>
     </section>
   );
@@ -204,27 +332,34 @@ export default function Skills() {
 // Skill Card Component
 function SkillCard({ skill }) {
   return (
-    <div className="flex bg-white/5 flex-col items-center p-5 rounded-lg w-20 md:w-48 neon-border transition duration-300 ease-in-out shadow-lg neon-hover mx-4">
-      <img
-        src={skill.image}
-        alt={skill.name}
-        className="w-8 h-8 md:w-12 md:h-12 mb-4 object-contain"
-        onError={(e) => {
-          // Fallback to a default icon if image fails to load
-          e.target.style.display = "none";
-          e.target.nextSibling.style.display = "block";
-        }}
-      />
-      {/* Fallback icon (hidden by default) */}
-      <div
-        className="w-8 h-8 md:w-12 md:h-12 mb-4 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center text-white text-xs md:text-sm font-bold"
-        style={{ display: "none" }}
-      >
-        {skill.name.substring(0, 2).toUpperCase()}
+    <div className="relative bg-black p-4 md:p-6 rounded-xl border border-white/20 shadow-lg hover:shadow-xl transition-all duration-300 hover:border-white/40 group overflow-hidden">
+      {/* Subtle background glow effect */}
+      <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl"></div>
+
+      {/* Neon border effect on hover */}
+      <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-blue-500/20 via-purple-500/20 to-blue-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm -z-10"></div>
+
+      <div className="relative z-10 flex flex-col items-center text-center space-y-3">
+        <div className="w-12 h-12 md:w-16 md:h-16 flex items-center justify-center rounded-lg bg-white/5 group-hover:bg-white/10 transition-colors duration-300">
+          <img
+            src={skill.image}
+            alt={skill.name}
+            className="w-8 h-8 md:w-10 md:h-10 object-contain group-hover:scale-110 transition-transform duration-300"
+            onError={(e) => {
+              e.target.style.display = "none";
+              e.target.nextSibling.style.display = "flex";
+            }}
+          />
+          {/* Fallback icon */}
+          <div className="w-8 h-8 md:w-10 md:h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg items-center justify-center text-white text-xs md:text-sm font-bold hidden">
+            {skill.name.substring(0, 2).toUpperCase()}
+          </div>
+        </div>
+
+        <p className="text-sm md:text-base font-medium text-gray-200 group-hover:text-white transition-colors duration-300">
+          {skill.name}
+        </p>
       </div>
-      <p className="text-sm md:text-lg font-semibold text-center">
-        {skill.name}
-      </p>
     </div>
   );
 }
