@@ -233,7 +233,7 @@ export default function ChatWindow() {
             </div>
 
             {/* Messages */}
-            <div className="flex-1 overflow-y-auto p-4 space-y-4 scrollbar-thin scrollbar-thumb-white/20 scrollbar-track-transparent">
+            <div className="flex-1 overflow-y-auto p-4 space-y-4 scrollbar-thumb-white/20 scrollbar-track-transparent custom-scrollbar">
               {messages.map((msg, idx) => (
                 <div
                   key={idx}
@@ -394,21 +394,55 @@ export default function ChatWindow() {
           animation: slideUp 0.4s ease-out;
         }
 
-        .scrollbar-thin {
+        /* Custom Dark Scrollbar */
+        .custom-scrollbar {
           scrollbar-width: thin;
+          scrollbar-color: rgba(50, 50, 50, 0.8) rgba(20, 20, 20, 0.3);
         }
 
-        .scrollbar-thumb-white\/20::-webkit-scrollbar-thumb {
-          background-color: rgba(255, 255, 255, 0.2);
-          border-radius: 9999px;
+        .custom-scrollbar::-webkit-scrollbar {
+          width: 8px;
         }
 
-        .scrollbar-track-transparent::-webkit-scrollbar-track {
-          background-color: transparent;
+        .custom-scrollbar::-webkit-scrollbar-track {
+          background: rgba(20, 20, 20, 0.3);
+          border-radius: 10px;
+          margin: 4px 0;
         }
 
-        ::-webkit-scrollbar {
-          width: 4px;
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+          background: linear-gradient(
+            180deg,
+            rgba(60, 60, 60, 0.8) 0%,
+            rgba(40, 40, 40, 0.8) 100%
+          );
+          border-radius: 10px;
+          border: 1px solid rgba(80, 80, 80, 0.3);
+          box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+          transition: all 0.3s ease;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+          background: linear-gradient(
+            180deg,
+            rgba(80, 80, 80, 0.9) 0%,
+            rgba(60, 60, 60, 0.9) 100%
+          );
+          border-color: rgba(100, 100, 100, 0.5);
+          box-shadow: 0 0 8px rgba(255, 255, 255, 0.1);
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-thumb:active {
+          background: linear-gradient(
+            180deg,
+            rgba(100, 100, 100, 0.9) 0%,
+            rgba(80, 80, 80, 0.9) 100%
+          );
+          border-color: rgba(120, 120, 120, 0.6);
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-corner {
+          background: transparent;
         }
       `}</style>
     </div>
