@@ -75,107 +75,347 @@ const categoryIcons = {
   Leadership: "emoji_events",
 };
 
+// Enhanced animation variants
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.15,
+      delayChildren: 0.2,
+      ease: [0.25, 0.46, 0.45, 0.94], // Smooth cubic-bezier
+    },
+  },
+};
+
+const cardVariants = {
+  hidden: (index) => ({
+    opacity: 0,
+    y: 60,
+    x: index % 2 === 0 ? -40 : 40,
+    scale: 0.95,
+    rotateX: 10,
+  }),
+  visible: {
+    opacity: 1,
+    y: 0,
+    x: 0,
+    scale: 1,
+    rotateX: 0,
+    transition: {
+      type: "spring",
+      damping: 25,
+      stiffness: 120,
+      mass: 0.8,
+      duration: 0.8,
+      ease: [0.25, 0.46, 0.45, 0.94],
+    },
+  },
+};
+
+const badgeVariants = {
+  hidden: {
+    scale: 0,
+    rotate: -180,
+    opacity: 0,
+  },
+  visible: {
+    scale: 1,
+    rotate: 0,
+    opacity: 1,
+    transition: {
+      type: "spring",
+      damping: 15,
+      stiffness: 200,
+      delay: 0.3,
+    },
+  },
+  hover: {
+    scale: 1.1,
+    rotate: 5,
+    transition: {
+      type: "spring",
+      damping: 10,
+      stiffness: 400,
+    },
+  },
+};
+
+const achievementVariants = {
+  hidden: { opacity: 0, x: -20, scale: 0.9 },
+  visible: (index) => ({
+    opacity: 1,
+    x: 0,
+    scale: 1,
+    transition: {
+      delay: 0.1 * index,
+      duration: 0.5,
+      ease: [0.25, 0.46, 0.45, 0.94],
+    },
+  }),
+};
+
+const headerVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.8,
+      ease: [0.25, 0.46, 0.45, 0.94],
+    },
+  },
+};
+
 export default function ExtraCurricular() {
   return (
-    <section className="bg-black text-white md:py-20 px-6 md:px-40">
+    <section className="bg-black text-white md:py-20 px-6 md:px-40 overflow-hidden">
       <div className="container mx-auto">
-        {/* Section Header */}
-        <div className="flex flex-col w-full justify-center items-center md:items-start mb-16">
-          <p className="text-gray-400 md:text-lg mb-1">My Involvement</p>
-          <p className="text-white text-4xl md:text-5xl font-bold">
+        {/* Section Header with enhanced animation */}
+        <motion.div
+          className="flex flex-col w-full justify-center items-center md:items-start mb-16"
+          variants={headerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+        >
+          <motion.p
+            className="text-gray-400 md:text-lg mb-1"
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: true }}
+          >
+            My Involvement
+          </motion.p>
+          <motion.p
+            className="text-white text-4xl md:text-5xl font-bold"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{
+              duration: 0.8,
+              delay: 0.4,
+              ease: [0.25, 0.46, 0.45, 0.94],
+            }}
+            viewport={{ once: true }}
+          >
             Activities.
-          </p>
-        </div>
+          </motion.p>
+        </motion.div>
 
-        {/* Activities Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+        {/* Activities Grid with staggered animations */}
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{
+            once: true,
+            amount: 0.1,
+            margin: "-100px 0px -100px 0px",
+          }}
+        >
           {activities.map((activity, index) => (
             <motion.div
               key={activity.id}
-              className="relative p-6 md:p-8 rounded-2xl shadow-neon neon-border bg-white/5 transition-all duration-300 group"
-              initial={{
-                y: 50,
-                opacity: 0,
-                x: index % 2 === 0 ? -50 : 50,
+              className="relative p-6 md:p-8 rounded-2xl shadow-neon neon-border bg-white/5 transition-all duration-500 group perspective-1000"
+              variants={cardVariants}
+              custom={index}
+              whileHover="hover"
+              whileTap={{ scale: 0.98 }}
+              style={{
+                transformStyle: "preserve-3d",
               }}
-              whileInView={{ x: 0, y: 0, opacity: 1 }}
-              transition={{
-                duration: 0.6,
-                ease: "easeOut",
-                delay: index * 0.1,
-              }}
-              viewport={{ once: true, amount: 0.3 }}
             >
-              {/* Category Badge */}
-              <div className="absolute top-4 right-4">
+              {/* Category Badge with enhanced animation */}
+              <motion.div
+                className="absolute top-4 right-4"
+                variants={badgeVariants}
+                whileHover="hover"
+              >
                 <div
                   className={`bg-gradient-to-r ${
                     categoryColors[activity.category]
-                  } p-2 rounded-full h-10 w-10 flex items-center justify-center`}
+                  } p-2 rounded-full h-10 w-10 flex items-center justify-center shadow-lg`}
                 >
                   <span className="material-symbols-outlined text-white text-lg">
                     {categoryIcons[activity.category]}
                   </span>
                 </div>
-              </div>
+              </motion.div>
 
-              {/* Header */}
+              {/* Header with staggered text animations */}
               <div className="mb-4">
-                <h3 className="text-xl md:text-2xl font-bold text-white mb-2 pr-12">
+                <motion.h3
+                  className="text-xl md:text-2xl font-bold text-white mb-2 pr-12"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{
+                    duration: 0.6,
+                    delay: 0.2,
+                    ease: [0.25, 0.46, 0.45, 0.94],
+                  }}
+                  viewport={{ once: true }}
+                >
                   {activity.title}
-                </h3>
-                <div className="flex flex-col md:flex-row md:items-center md:gap-2 text-sm md:text-base">
+                </motion.h3>
+                <motion.div
+                  className="flex flex-col md:flex-row md:items-center md:gap-2 text-sm md:text-base"
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.5, delay: 0.3 }}
+                  viewport={{ once: true }}
+                >
                   <p className="text-blue-300 font-semibold">{activity.role}</p>
                   <span className="hidden md:inline text-gray-500">•</span>
                   <p className="text-gray-400">{activity.organization}</p>
-                </div>
-                <p className="text-gray-500 text-sm mt-1">{activity.period}</p>
+                </motion.div>
+                <motion.p
+                  className="text-gray-500 text-sm mt-1"
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{ duration: 0.5, delay: 0.4 }}
+                  viewport={{ once: true }}
+                >
+                  {activity.period}
+                </motion.p>
               </div>
 
-              {/* Description */}
-              <p className="text-gray-300 text-sm md:text-base leading-relaxed mb-6">
+              {/* Description with smooth fade-in */}
+              <motion.p
+                className="text-gray-300 text-sm md:text-base leading-relaxed mb-6"
+                initial={{ opacity: 0, y: 15 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{
+                  duration: 0.6,
+                  delay: 0.3,
+                  ease: [0.25, 0.46, 0.45, 0.94],
+                }}
+                viewport={{ once: true }}
+              >
                 {activity.description}
-              </p>
+              </motion.p>
 
-              {/* Achievements */}
+              {/* Achievements with staggered animations */}
               <div className="mb-4">
-                <h4 className="text-white font-semibold mb-3 flex items-center gap-2">
-                  <span className="material-symbols-outlined text-yellow-400 text-lg">
+                <motion.h4
+                  className="text-white font-semibold mb-3 flex items-center gap-2"
+                  initial={{ opacity: 0, x: -15 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.5, delay: 0.4 }}
+                  viewport={{ once: true }}
+                >
+                  <motion.span
+                    className="material-symbols-outlined text-yellow-400 text-lg"
+                    initial={{ scale: 0, rotate: -90 }}
+                    whileInView={{ scale: 1, rotate: 0 }}
+                    transition={{
+                      type: "spring",
+                      damping: 15,
+                      stiffness: 200,
+                      delay: 0.5,
+                    }}
+                    viewport={{ once: true }}
+                  >
                     star
-                  </span>
+                  </motion.span>
                   Key Achievements
-                </h4>
+                </motion.h4>
                 <ul className="space-y-2">
                   {activity.achievements.map((achievement, idx) => (
-                    <li
+                    <motion.li
                       key={idx}
                       className="text-gray-300 text-sm flex items-start gap-2"
+                      variants={achievementVariants}
+                      custom={idx}
+                      initial="hidden"
+                      whileInView="visible"
+                      viewport={{ once: true }}
                     >
-                      <span className="material-symbols-outlined text-green-400 text-xs mt-0.5">
+                      <motion.span
+                        className="material-symbols-outlined text-green-400 text-xs mt-0.5"
+                        initial={{ scale: 0, opacity: 0 }}
+                        whileInView={{ scale: 1, opacity: 1 }}
+                        transition={{
+                          type: "spring",
+                          damping: 15,
+                          stiffness: 300,
+                          delay: 0.1 * idx + 0.6,
+                        }}
+                        viewport={{ once: true }}
+                      >
                         check_circle
-                      </span>
-                      {achievement}
-                    </li>
+                      </motion.span>
+                      <motion.span
+                        initial={{ opacity: 0, x: -10 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{
+                          duration: 0.4,
+                          delay: 0.1 * idx + 0.7,
+                          ease: [0.25, 0.46, 0.45, 0.94],
+                        }}
+                        viewport={{ once: true }}
+                      >
+                        {achievement}
+                      </motion.span>
+                    </motion.li>
                   ))}
                 </ul>
               </div>
 
-              {/* Category Label */}
-              <div className="flex items-center justify-between mt-6 pt-4 border-t border-gray-700">
-                <span
+              {/* Category Label with slide-up animation */}
+              <motion.div
+                className="flex items-center justify-between mt-6 pt-4 border-t border-gray-700"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{
+                  duration: 0.5,
+                  delay: 0.8,
+                  ease: [0.25, 0.46, 0.45, 0.94],
+                }}
+                viewport={{ once: true }}
+              >
+                <motion.span
                   className={`px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r ${
                     categoryColors[activity.category]
-                  } text-white`}
+                  } text-white shadow-lg`}
+                  whileHover={{
+                    scale: 1.05,
+                    boxShadow: "0 8px 25px rgba(59, 130, 246, 0.3)",
+                  }}
+                  transition={{
+                    type: "spring",
+                    damping: 15,
+                    stiffness: 300,
+                  }}
                 >
                   {activity.category}
-                </span>
-              </div>
+                </motion.span>
+              </motion.div>
 
+              {/* Enhanced hover effect overlay */}
+              <motion.div
+                className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent rounded-2xl pointer-events-none"
+                initial={{ opacity: 0 }}
+                whileHover={{ opacity: 1 }}
+                transition={{ duration: 0.3, ease: "easeInOut" }}
+              />
+
+              {/* Subtle border glow on hover */}
+              <motion.div
+                className="absolute inset-0 rounded-2xl border border-white/20 pointer-events-none"
+                initial={{ opacity: 0 }}
+                whileHover={{
+                  opacity: 1,
+                  boxShadow: "0 0 30px rgba(255, 255, 255, 0.1)",
+                }}
+                transition={{ duration: 0.3 }}
+              />
               {/* Hover Effect Overlay */}
               <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl pointer-events-none"></div>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
